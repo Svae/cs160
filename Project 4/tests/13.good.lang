@@ -1,0 +1,27 @@
+c0 {
+    boolean m0
+    boolean m1
+    integer m2
+    boolean m3
+    integer m4
+    boolean m5
+    f0(a0 : boolean) -> integer {
+        if f0(f0(61 * true), 166) {
+            f0(false)
+            f0(false or f0(48))
+            }
+        
+        return 205
+        }
+    f1(a0 : boolean) -> integer {
+        while 130 {
+            f1(61)
+            print false
+            }
+        
+        return 87
+        }
+    }
+c1 extends c0 {
+    c0 m0
+    }

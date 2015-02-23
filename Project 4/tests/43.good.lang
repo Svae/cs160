@@ -1,0 +1,40 @@
+c0 {
+    boolean m0
+    integer m1
+    integer m2
+    integer m3
+    boolean m4
+    boolean m5
+    integer m6
+    boolean m7
+    integer m8
+    f0(a0 : boolean) -> none {
+        print 194
+        
+        }
+    f1(a0 : boolean, a1 : integer, a2 : boolean) -> integer {
+        boolean l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13
+        integer l14, l15, l16, l17, l18, l19, l20, l21, l22, l23
+        boolean l24, l25, l26
+        boolean l27
+        integer l28, l29
+        integer l30, l31, l32
+        integer l33
+        integer l34, l35, l36, l37
+        while false {
+            l20 = 160
+            l23 = 112
+            }
+        
+        return 84 * 147
+        }
+    }
+c1 {
+    f0(a0 : c0) -> c0 {
+        c0 l0, l1
+        c0 l2, l3, l4, l5, l6, l7, l8, l9
+        c0 l10, l11, l12, l13, l14
+        l5.f1(l7.m8)
+        return l4.m5
+        }
+    }

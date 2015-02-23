@@ -1,0 +1,25 @@
+c0 {
+    boolean m0
+    boolean m1
+    boolean m2
+    integer m3
+    integer m4
+    integer m5
+    boolean m6
+    boolean m7
+    boolean m8
+    f0() -> boolean {
+        print -244
+        return -129
+        }
+    f1(a0 : boolean) -> integer {
+        f0(true)
+        if f0(241) {
+            print 210 and 114
+            print 141
+            print true
+            }
+        
+        return 28 - 3
+        }
+    }

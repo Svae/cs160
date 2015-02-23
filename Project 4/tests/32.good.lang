@@ -1,0 +1,108 @@
+c0 {
+    boolean m0
+    integer m1
+    integer m2
+    boolean m3
+    boolean m4
+    integer m5
+    boolean m6
+    integer m7
+    boolean m8
+    integer m9
+    boolean m10
+    integer m11
+    boolean m12
+    integer m13
+    boolean m14
+    integer m15
+    integer m16
+    integer m17
+    integer m18
+    f0(a0 : integer) -> none {
+        while f0(100) {
+            f0(false)
+            if not 170 {
+                print false
+                print (44)
+                f0(true)
+                } else {
+            f0(105)
+            print -137
+            print false and f0(f0(178), 245)
+            }
+            
+            print true or true
+            f0(true)
+            }
+        
+        
+        }
+    f1(a0 : boolean, a1 : integer) -> none {
+        f0(true)
+        
+        }
+    }
+c1 {
+    c0 m0
+    c0 m1
+    c0 m2
+    boolean m3
+    c0 m4
+    c0 m5
+    f0(a0 : c0) -> none {
+        integer l0, l1, l2, l3, l4, l5, l6, l7, l8
+        c0 l9, l10
+        c0 l11, l12, l13, l14, l15, l16, l17
+        c0 l18, l19, l20, l21, l22, l23, l24
+        while l20.f0(true or l9.m6) {
+            l13.f0(false, new c0)
+            l16.m12 = l15.m5
+            }
+        
+        
+        }
+    f1(a0 : c0, a1 : c0, a2 : c0) -> none {
+        while 66 / true {
+            if false {
+                print f0(true)
+                }
+            
+            if f1(false) equals false {
+                while 60 {
+                    f0(145)
+                    print new c0 + 163
+                    }
+                
+                f0(25)
+                print false / f0(13)
+                } else {
+            while true {
+                print true
+                print f0(f1(true, 244), false, false)
+                f0(196)
+                if 111 {
+                    f0(true, true, f1(true))
+                    f0(100)
+                    } else {
+                f0(true)
+                print 131
+                }
+                
+                }
+            
+            f0(61)
+            }
+            
+            if f1(new c0) {
+                f1(85, 225 < f0(81))
+                print 143
+                f0(f1(true - true))
+                } else {
+            f0(true)
+            }
+            
+            }
+        
+        
+        }
+    }

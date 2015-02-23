@@ -1,0 +1,55 @@
+c0 {
+    integer m0
+    }
+c1 {
+    f0(a0 : c0, a1 : c0, a2 : c0) -> none {
+        integer l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12
+        boolean l13, l14, l15
+        c0 l16, l17, l18, l19, l20
+        c0 l21
+        integer l22, l23, l24, l25, l26
+        print true + false
+        
+        }
+    }
+c2 {
+    c1 m0
+    c1 m1
+    c1 m2
+    f0(a0 : c1) -> boolean {
+        c0 l0, l1, l2, l3, l4, l5, l6, l7, l8, l9
+        f0(true)
+        l0.m0 = false
+        f0(89)
+        return 246
+        }
+    f1(a0 : boolean) -> c0 {
+        boolean l0, l1, l2
+        integer l3
+        integer l4, l5, l6
+        while 113 {
+            l3 = f0(229)
+            print 129
+            }
+        
+        return 86 - new c1 ( l3 ) 
+        }
+    }
+c3 extends c0 {
+    c1 m0
+    f0() -> none {
+        f0(new c1 ( 6, new c2 ) , true, new c1)
+        print 169
+        
+        }
+    f1(a0 : c2, a1 : c2, a2 : c2, a3 : c2, a4 : c2) -> c0 {
+        c2 l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19, l20, l21, l22, l23, l24, l25, l26, l27
+        c2 l28
+        c1 l29
+        c1 l30
+        c0 l31, l32, l33, l34, l35, l36, l37, l38
+        boolean l39, l40, l41, l42, l43, l44, l45, l46
+        l11.m1 = new c2 ( new c2 ) 
+        return false
+        }
+    }

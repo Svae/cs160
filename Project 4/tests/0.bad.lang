@@ -1,0 +1,197 @@
+c0 {
+    integer m0
+    integer m1
+    integer m2
+    boolean m3
+    integer m4
+    boolean m5
+    f0(a0 : boolean) -> integer {
+        integer l0
+        boolean l1, l2, l3, l4, l5
+        l5 = 114
+        while false {
+            f0(f0(227) <= 178)
+            l1 = 115
+            }
+ 	  /* note to self: throw parse error */
+        if 162 {
+            f0(false)
+            f0(f0(f0(138), 35), 147 and f0(66, l0), 108)
+            if f0(false) {
+                f0(54, true, false equals l1, 192)
+                f0(f0(false / 221), true)
+                }
+            
+            } else {
+        l0 = false + f0(183)
+        while f0(l0) {
+            f0(f0(30))
+            l1 = 160
+            }
+        
+        }
+        
+        return false
+        }
+    f1() -> boolean {
+        boolean l0
+        l0 = true equals l0
+        if 25 - false {
+            l0 = 180 - f0(not f1(l0))
+            if false {
+                print f1(197 or f0(f0(false))) equals 15
+                l0 = false
+                } else {
+            l0 = 169 equals l0
+            f0(false)
+            print -true
+            }
+            
+            }
+        
+        return false
+        }
+    }
+c1 extends c0 {
+    c0 m0
+    f0(a0 : boolean) -> c0 {
+        integer l0, l1, l2, l3, l4, l5
+        c0 l6
+        c0 l7, l8, l9, l10, l11
+        c0 l12, l13, l14, l15, l16
+        l8 f1(true)
+        return true
+        }
+    f1(a0 : c0, a1 : c0) -> boolean {
+        c0 l0, l1, l2
+        c0 l3, l4, l5
+        c0 l6
+        integer l7
+        c0 l8, l9, l10, l11, l12, l13, l14
+        c0 l15, l16, l17, l18, l19, l20, l21
+        c0 l22
+        c0 l23
+        c0 l24, l25, l26, l27, l28, l29
+        l22 f1(l3 f1(l13 f1(new c0 ( not l0.m1 ) , new c0 ( new c0 ) , l15 f0(not l17 f0(false)) <= 14)), l10 f0(211))
+        return true equals 249
+        }
+    }
+c2 extends c1 {
+    f0(a0 : c0) -> none {
+        c0 l0, l1
+        c0 l2, l3, l4
+        print 2
+        
+        }
+    f1(a0 : c1) -> none {
+        c0 l0, l1, l2
+        l0.m3 = new c0 ( true, 97, false, true - false, true )  <= l2 f1(198)
+        l0 f1(true)
+        
+        }
+    f2() -> none {
+        while new c1 ( f2(new c0 ( 62 ) ) )  / 75 {
+            print 231
+            if 116 {
+                print 207
+                print new c1
+                while new c1 ( new c1 ( false, false )  )  {
+                    if new c0 {
+                        while 20 {
+                            if 150 {
+                                print new c1
+                                print new c0 ( true ) 
+                                print 90
+                                } else {
+                            while f1(new c1 ( new c1 ( (true) ) , true ) ) {
+                                f2(-f0(true), new c0 ( false ) )
+                                f0(118, f1(212))
+                                }
+                            
+                            f0(10, 237)
+                            }
+                            
+                            while 45 <= new c1 ( false )  {
+                                print new c1 ( true, new c1, false, 72 )  / 191
+                                while true {
+                                    while true / true {
+                                        print new c1 ( new c0 ( false ) , new c1 ( true, new c1 ( 231 )  )  ) 
+                                        while false {
+                                            f1(82)
+                                            f0(228)
+                                            print -122
+                                            }
+                                        
+                                        }
+                                    
+                                    while false {
+                                        while 2 {
+                                            f0(251)
+                                            while new c0 ( new c1 )  {
+                                                if f1(false, new c1, false) {
+                                                    f0(12)
+                                                    print 75
+                                                    while f0(134) / false {
+                                                        print new c1 ( 234 ) 
+                                                        print f0(new c1 ( new c1, 76, false ) )
+                                                        if new c1 ( new c0 ( false, false )  )  {
+                                                            print f0(235)
+                                                            if f0(false) {
+                                                                print 188 - 178
+                                                                f0(true, 147)
+                                                                f2(f1(20, false))
+                                                                }
+                                                            
+                                                            } else {
+                                                        f1(106, true)
+                                                        f0(126, true)
+                                                        }
+                                                        
+                                                        }
+                                                    
+                                                    }
+                                                
+                                                print false
+                                                f1(f0(234, 172) or true)
+                                                }
+                                            
+                                            }
+                                        
+                                        f1(false, false)
+                                        f1(182)
+                                        }
+                                    
+                                    }
+                                
+                                }
+                            
+                            }
+                        
+                        f1(216)
+                        f0(221 + true)
+                        }
+                    
+                    if new c0 {
+                        print f1(49) - new c1
+                        print 53
+                        print f0(80)
+                        print new c0
+                        } else {
+                    print true and 4
+                    print new c1
+                    f0(new c0)
+                    }
+                    
+                    print (true)
+                    f1(f0(new c0))
+                    }
+                
+                }
+            
+            print new c1
+            }
+        
+        print new c0 ( 233 ) 
+        
+        }
+    }

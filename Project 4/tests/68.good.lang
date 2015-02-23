@@ -1,0 +1,66 @@
+c0 {
+    f0(a0 : boolean) -> integer {
+        integer l0
+        boolean l1, l2, l3
+        f0(l0, 208)
+        return false or 133
+        }
+    f1(a0 : boolean, a1 : integer) -> integer {
+        if true {
+            print 235
+            f1(51)
+            } else {
+        print 226
+        print 20
+        }
+        
+        print f1(129)
+        return 12
+        }
+    }
+c1 {
+    c0 m0
+    c0 m1
+    c0 m2
+    c0 m3
+    f0(a0 : c0, a1 : c0, a2 : c0) -> c0 {
+        print new c0
+        return not true * new c0
+        }
+    f1() -> none {
+        c0 l0, l1, l2
+        boolean l3, l4, l5, l6, l7, l8, l9, l10
+        c0 l11, l12
+        c0 l13
+        c0 l14, l15, l16, l17, l18
+        boolean l19
+        integer l20, l21, l22, l23, l24, l25, l26, l27
+        l6 = new c0 ( l27 ) 
+        
+        }
+    }
+c2 extends c1 {
+    c1 m0
+    c1 m1
+    c1 m2
+    }
+c3 {
+    f0(a0 : integer) -> none {
+        c2 l0, l1, l2, l3, l4
+        l3.f1(false - new c1)
+        
+        }
+    }
+c4 extends c3 {
+    c3 m0
+    f0(a0 : c3) -> c1 {
+        f0(f0(f0(222, 141), 215))
+        return f0(11, 62) <= f0(f0(true), false)
+        }
+    f1(a0 : c3, a1 : boolean) -> boolean {
+        integer l0, l1, l2, l3, l4
+        l1 = f1(true) and new c0
+        f1(new c0)
+        return f1(false, 142) * new c1 ( false equals 206, new c1 ( new c0 )  ) 
+        }
+    }

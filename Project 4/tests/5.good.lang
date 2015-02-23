@@ -1,0 +1,167 @@
+c0 {
+    integer m0
+    f0(a0 : boolean, a1 : boolean) -> none {
+        boolean l0, l1, l2, l3
+        boolean l4
+        l2 = false and true
+        
+        }
+    }
+c1 {
+    c0 m0
+    c0 m1
+    c0 m2
+    c0 m3
+    integer m4
+    f0() -> c0 {
+        return 209 equals f0(true, true)
+        }
+    }
+c2 extends c0 {
+    c1 m0
+    f0() -> c1 {
+        boolean l0, l1, l2, l3, l4, l5, l6
+        l0 = true
+        while true {
+            l2 = l1 * new c1
+            l5 = l5
+            }
+        
+        return new c0 + new c0
+        }
+    }
+c3 extends c0 {
+    c0 m0
+    c2 m1
+    boolean m2
+    c2 m3
+    c2 m4
+    integer m5
+    f0(a0 : c2) -> c0 {
+        f0(new c2)
+        return 176
+        }
+    f1(a0 : c0, a1 : c1, a2 : boolean, a3 : c0, a4 : c1, a5 : c0) -> c2 {
+        return true * new c2 ( 107, true ) 
+        }
+    f2() -> c1 {
+        print true * true
+        print new c1
+        return 103 + new c2
+        }
+    }
+c4 extends c0 {
+    f0(a0 : c1) -> c0 {
+        c0 l0, l1, l2, l3, l4
+        c2 l5
+        c0 l6, l7, l8
+        l6.f0(new c2)
+        l0.f0(new c0 equals 222)
+        return l2.f0(new c0, true, new c1)
+        }
+    f1(a0 : c1) -> c1 {
+        c3 l0, l1, l2, l3, l4
+        boolean l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16
+        c3 l17, l18, l19, l20, l21, l22, l23
+        integer l24, l25
+        c2 l26
+        c3 l27, l28, l29, l30, l31, l32, l33
+        l24 = 188
+        l4.m0 = 103
+        l0.f0(l31.f0(not new c2, (l1.m1)))
+        return new c1 ( true ) 
+        }
+    }
+c5 {
+    c4 m0
+    c1 m1
+    f0(a0 : c0, a1 : c3) -> none {
+        c4 l0, l1, l2, l3, l4, l5
+        c0 l6, l7
+        l2.f1(new c1 / false)
+        l3.f0(true)
+        
+        }
+    f1(a0 : c1) -> c3 {
+        c1 l0, l1, l2, l3, l4, l5, l6
+        c3 l7, l8, l9, l10, l11, l12
+        l2.f0(false)
+        return new c1 ( new c2 ) 
+        }
+    f2(a0 : c2) -> none {
+        f1(true)
+        
+        }
+    }
+c6 {
+    c0 m0
+    c1 m1
+    c2 m2
+    f0(a0 : c4, a1 : c4, a2 : c2, a3 : c1) -> c3 {
+        c1 l0, l1, l2
+        c1 l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13
+        if 246 {
+            l0.f0(true)
+            l1.m0 = not l6.m1
+            l2.m0 = new c1 ( 177 )  * l7.f0(false)
+            } else {
+        l1.f0(new c4)
+        if true + false {
+            l9.m3 = l11.m0
+            l11.m1 = new c4 / 176
+            } else {
+        l0.f0(l9.f0(true))
+        while new c3 {
+            l12.f0(218)
+            l8.m3 = l3.f0(l4.m2 and false)
+            l7.f0(106 and l8.m2)
+            l10.m2 = false
+            }
+        
+        }
+        
+        }
+        
+        return not new c1
+        }
+    }
+c7 extends c2 {
+    integer m0
+    c0 m1
+    c3 m2
+    c2 m3
+    c4 m4
+    c2 m5
+    boolean m6
+    c6 m7
+    boolean m8
+    c6 m9
+    c0 m10
+    c4 m11
+    integer m12
+    c6 m13
+    c4 m14
+    integer m15
+    c2 m16
+    c3 m17
+    c0 m18
+    f0() -> c0 {
+        c4 l0, l1, l2, l3
+        integer l4
+        l1.m0 = (229)
+        while (new c5 ( false, false, false ) ) {
+            print false
+            l2.m0 = new c1
+            }
+        
+        while new c3 equals f0(false) {
+            l3.f0(l1.f0(22))
+            }
+        
+        return 242
+        }
+    f1() -> none {
+        print 45
+        
+        }
+    }

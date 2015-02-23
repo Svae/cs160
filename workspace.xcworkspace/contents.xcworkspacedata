@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Project 5"
+      name = "Project 5">
+      <FileRef
+         location = "group:ast.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:ast.hpp">
+      </FileRef>
+      <FileRef
+         location = "group:genast.py">
+      </FileRef>
+      <FileRef
+         location = "group:lang.def">
+      </FileRef>
+      <FileRef
+         location = "group:lexer.l">
+      </FileRef>
+      <FileRef
+         location = "group:main.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:Makefile">
+      </FileRef>
+      <FileRef
+         location = "group:output.txt">
+      </FileRef>
+      <FileRef
+         location = "group:parser.y">
+      </FileRef>
+      <FileRef
+         location = "group:runtests.py">
+      </FileRef>
+      <Group
+         location = "group:tests"
+         name = "tests">
+         <FileRef
+            location = "group:0.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:0.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:1.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:1.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:10.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:10.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:11.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:11.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:12.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:12.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:13.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:13.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:14.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:14.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:15.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:15.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:16.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:16.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:17.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:17.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:18.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:18.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:19.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:19.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:2.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:2.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:20.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:20.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:21.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:21.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:22.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:22.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:23.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:23.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:24.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:24.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:25.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:25.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:26.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:26.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:27.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:27.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:28.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:28.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:29.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:29.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:3.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:3.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:30.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:30.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:31.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:31.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:32.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:32.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:33.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:33.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:34.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:34.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:35.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:35.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:36.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:36.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:37.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:37.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:38.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:38.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:39.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:39.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:4.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:4.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:40.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:41.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:42.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:43.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:44.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:45.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:46.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:47.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:48.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:49.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:5.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:5.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:50.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:51.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:52.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:53.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:54.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:55.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:56.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:57.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:58.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:59.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:6.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:6.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:7.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:7.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:8.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:8.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:9.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:9.good.lang">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:typecheck.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:typecheck.hpp">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Project 4"
+      name = "Project 4">
+      <FileRef
+         location = "group:ast.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:ast.hpp">
+      </FileRef>
+      <FileRef
+         location = "group:genast.py">
+      </FileRef>
+      <FileRef
+         location = "group:lang.def">
+      </FileRef>
+      <FileRef
+         location = "group:lexer.l">
+      </FileRef>
+      <FileRef
+         location = "group:main.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:Makefile">
+      </FileRef>
+      <FileRef
+         location = "group:output.txt">
+      </FileRef>
+      <FileRef
+         location = "group:parser.y">
+      </FileRef>
+      <FileRef
+         location = "group:runtests.py">
+      </FileRef>
+      <Group
+         location = "group:tests"
+         name = "tests">
+         <FileRef
+            location = "group:0.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:0.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:1.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:1.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:10.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:11.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:12.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:13.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:14.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:15.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:16.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:17.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:18.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:19.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:2.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:2.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:20.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:21.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:22.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:23.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:24.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:25.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:26.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:27.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:28.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:29.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:3.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:3.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:30.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:31.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:32.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:33.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:34.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:35.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:36.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:37.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:38.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:39.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:4.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:4.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:40.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:41.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:42.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:43.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:44.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:45.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:46.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:47.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:48.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:49.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:5.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:5.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:50.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:51.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:52.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:53.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:54.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:55.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:56.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:57.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:58.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:59.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:6.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:6.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:60.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:61.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:62.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:63.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:64.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:65.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:66.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:67.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:68.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:69.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:7.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:7.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:70.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:71.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:72.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:73.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:74.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:75.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:76.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:77.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:78.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:79.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:8.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:8.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:80.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:81.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:82.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:83.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:84.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:85.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:86.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:87.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:88.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:89.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:9.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:9.good.lang">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Project 3"
+      name = "Project 3">
+      <FileRef
+         location = "group:lexer.l">
+      </FileRef>
+      <FileRef
+         location = "group:main.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:Makefile">
+      </FileRef>
+      <FileRef
+         location = "group:output.txt">
+      </FileRef>
+      <FileRef
+         location = "group:parser.y">
+      </FileRef>
+      <FileRef
+         location = "group:runtests.py">
+      </FileRef>
+      <Group
+         location = "group:tests"
+         name = "tests">
+         <FileRef
+            location = "group:0.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:0.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:1.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:1.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:10.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:10.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:11.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:11.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:12.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:12.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:13.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:13.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:14.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:14.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:15.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:15.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:16.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:16.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:17.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:17.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:18.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:18.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:19.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:19.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:2.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:2.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:20.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:20.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:21.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:21.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:22.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:22.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:23.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:23.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:24.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:24.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:25.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:25.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:26.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:26.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:27.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:27.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:28.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:28.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:29.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:29.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:3.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:3.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:30.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:31.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:32.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:33.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:34.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:35.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:36.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:37.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:38.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:39.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:4.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:4.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:40.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:41.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:42.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:43.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:44.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:45.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:46.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:47.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:48.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:49.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:5.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:5.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:6.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:6.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:7.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:7.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:8.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:8.good.lang">
+         </FileRef>
+         <FileRef
+            location = "group:9.bad.lang">
+         </FileRef>
+         <FileRef
+            location = "group:9.good.lang">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Project 2"
+      name = "Project 2">
+      <FileRef
+         location = "group:calculator.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:Makefile">
+      </FileRef>
+      <FileRef
+         location = "group:output.txt">
+      </FileRef>
+      <FileRef
+         location = "group:runtests.py">
+      </FileRef>
+      <Group
+         location = "group:tests"
+         name = "tests">
+         <FileRef
+            location = "group:0.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:0.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:0.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:0.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:1.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:1.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:1.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:1.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:10.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:10.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:10.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:10.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:11.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:11.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:11.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:11.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:12.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:12.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:12.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:12.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:13.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:13.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:13.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:13.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:14.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:14.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:14.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:14.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:15.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:15.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:15.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:15.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:16.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:16.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:16.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:16.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:17.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:17.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:17.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:17.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:18.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:18.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:18.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:18.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:19.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:19.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:19.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:19.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:2.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:2.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:2.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:2.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:20.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:20.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:21.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:21.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:22.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:22.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:23.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:23.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:24.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:24.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:25.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:26.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:27.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:28.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:29.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:3.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:3.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:3.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:3.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:30.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:31.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:32.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:33.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:34.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:4.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:4.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:4.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:4.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:5.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:5.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:5.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:5.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:6.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:6.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:6.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:6.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:7.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:7.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:7.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:7.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:8.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:8.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:8.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:8.scan.calc">
+         </FileRef>
+         <FileRef
+            location = "group:9.bad.calc">
+         </FileRef>
+         <FileRef
+            location = "group:9.eval.calc">
+         </FileRef>
+         <FileRef
+            location = "group:9.good.calc">
+         </FileRef>
+         <FileRef
+            location = "group:9.scan.calc">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:Project 1"
+      name = "Project 1">
+      <FileRef
+         location = "group:example.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example1.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example10.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example11.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example12.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example13.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example14.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example15.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example16.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example17.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example18.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example19.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example2.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example20.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example21.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example22.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example23.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example24.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example25.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example3.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example4.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example5.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example6.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example7.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example8.tree">
+      </FileRef>
+      <FileRef
+         location = "group:example9.tree">
+      </FileRef>
+      <FileRef
+         location = "group:main.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:Makefile">
+      </FileRef>
+      <FileRef
+         location = "group:max.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:max.hpp">
+      </FileRef>
+      <FileRef
+         location = "group:output.txt">
+      </FileRef>
+      <FileRef
+         location = "group:print.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:print.hpp">
+      </FileRef>
+      <FileRef
+         location = "group:sum.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:sum.hpp">
+      </FileRef>
+      <FileRef
+         location = "group:tree.hpp">
+      </FileRef>
+      <FileRef
+         location = "group:visitor.hpp">
+      </FileRef>
+   </Group>
+</Workspace>

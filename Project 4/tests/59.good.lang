@@ -1,0 +1,54 @@
+c0 {
+    boolean m0
+    f0(a0 : boolean, a1 : boolean) -> none {
+        integer l0, l1, l2, l3, l4
+        integer l5, l6, l7
+        boolean l8, l9, l10
+        l10 = true
+        
+        }
+    }
+c1 {
+    c0 m0
+    c0 m1
+    c0 m2
+    boolean m3
+    c0 m4
+    c0 m5
+    integer m6
+    c0 m7
+    c0 m8
+    integer m9
+    c0 m10
+    f0(a0 : integer, a1 : c0) -> c0 {
+        c0 l0, l1
+        c0 l2, l3, l4
+        c0 l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15
+        c0 l16, l17
+        c0 l18
+        boolean l19, l20, l21, l22, l23
+        print l3.f0(true, true)
+        l3.f0(new c0)
+        return 164
+        }
+    }
+c2 extends c1 {
+    c1 m0
+    c0 m1
+    f0(a0 : c0) -> c0 {
+        c1 l0, l1, l2, l3
+        c1 l4, l5, l6, l7
+        c0 l8, l9, l10, l11
+        c0 l12
+        c0 l13, l14, l15, l16
+        c1 l17
+        f0(new c0 ( 197 ) )
+        l12.m0 = new c1 ( true ) 
+        return 236
+        }
+    f1(a0 : c1, a1 : c0, a2 : integer) -> c1 {
+        print f0(true, 92)
+        f0(true, new c1)
+        return true + f0(new c1, 110, new c1 ( true ) )
+        }
+    }

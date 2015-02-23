@@ -1,0 +1,14 @@
+c0 {
+    boolean m0
+    boolean m1
+    integer m2
+    boolean m3
+    integer m4
+    boolean m5
+    integer m6
+    f0() -> boolean {
+        integer l0, l1, l2, l3, l4, l5, l6, l7, l8, l9
+        f0((true))
+        return false
+        }
+    }

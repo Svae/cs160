@@ -1,0 +1,23 @@
+c0 {
+    f0(a0 : boolean, a1 : integer, a2 : integer, a3 : boolean) -> none {
+        boolean l0
+        boolean l1
+        f0(true <= true)
+        l1 = l1
+        l1 = l0
+        
+        }
+    f1(a0 : boolean, a1 : boolean) -> boolean {
+        print false
+        return 184
+        }
+    }
+c1 {
+    c0 m0
+    c0 m1
+    f0(a0 : c0, a1 : c0, a2 : boolean) -> none {
+        f0(false)
+        print 216 < new c0 ( f0(false, 42) ) 
+        
+        }
+    }

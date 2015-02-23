@@ -1,0 +1,8 @@
+c0 {
+    f0(a0 : boolean) -> none {
+        integer l0, l1
+        f0(75)
+        l0 = 52 / true
+        
+        }
+    }

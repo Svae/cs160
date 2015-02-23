@@ -1,0 +1,15 @@
+c0 {
+    boolean m0
+    boolean m1
+    boolean m2
+    integer m3
+    boolean m4
+    integer m5
+    integer m6
+    f0(a0 : boolean, a1 : boolean) -> boolean {
+        integer l0, l1
+        l0 = l0
+        f0(true)
+        return 238 / 252
+        }
+    }

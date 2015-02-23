@@ -1,0 +1,1830 @@
+Grammar
+
+    0 $accept: Start $end
+
+    1 Start: Classes
+
+    2 Classes: Classes Class
+    3        | /* empty */
+
+    4 Class: T_IDENTIFIER Copt T_OPENBRACKET Members Methods T_CLOSEBRACKET
+
+    5 Copt: T_EXTENDS T_IDENTIFIER
+    6     | /* empty */
+
+    7 Members: Members Member
+    8        | /* empty */
+
+    9 Member: Type Id
+
+   10 Id: T_IDENTIFIER
+
+   11 Type: TYPE_BOOLEAN
+   12     | TYPE_INTEGER
+   13     | T_IDENTIFIER
+   14     | T_NONE
+
+   15 Methods: Method Methods
+   16        | /* empty */
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW Type T_OPENBRACKET Mbody T_CLOSEBRACKET
+
+   18 Parameters: Parameters T_COMMA T_IDENTIFIER T_COLON Type
+   19           | T_IDENTIFIER T_COLON Type
+   20           | /* empty */
+
+   21 Mbody: Declarations Statements Mreturn
+
+   22 Declarations: Declarations Declaration
+   23             | /* empty */
+
+   24 Declaration: Type Identifiers
+
+   25 Identifiers: T_IDENTIFIER T_COMMA Identifiers
+   26            | T_IDENTIFIER
+
+   27 Statements: Statement Statements
+   28           | /* empty */
+
+   29 Statement: Assignments
+   30          | Mcalls
+   31          | IfElses
+   32          | Whiles
+   33          | Prints
+
+   34 Assignments: T_IDENTIFIER T_EQUAL Expression
+   35            | T_IDENTIFIER T_DOT T_IDENTIFIER T_EQUAL Expression
+
+   36 Mcalls: T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+   37       | T_IDENTIFIER T_DOT T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+
+   38 Arg: Arg T_COMMA Expression
+   39    | Expression
+   40    | /* empty */
+
+   41 IfElses: T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET
+   42        | T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET T_ELSE T_OPENBRACKET Block T_CLOSEBRACKET
+
+   43 Whiles: T_WHILE Expression T_OPENBRACKET Block T_CLOSEBRACKET
+
+   44 Block: Statement Statements
+
+   45 Prints: T_PRINT Expression
+
+   46 Expression: Expression T_PLUS Expression
+   47           | Expression T_MINUS Expression
+   48           | Expression T_MULTIPLY Expression
+   49           | Expression T_DIVIDE Expression
+   50           | Expression T_LESS Expression
+   51           | Expression T_LESSOREQL Expression
+   52           | Expression T_EQUALS Expression
+   53           | Expression T_AND Expression
+   54           | Expression T_OR Expression
+   55           | T_NOT Expression
+   56           | T_MINUS Expression
+   57           | T_IDENTIFIER
+   58           | T_IDENTIFIER T_DOT T_IDENTIFIER
+   59           | Mcalls
+   60           | T_OPENPAREN Expression T_CLOSEPAREN
+   61           | T_NUMBER
+   62           | T_TRUE
+   63           | T_FALSE
+   64           | T_NEW T_IDENTIFIER
+   65           | T_NEW T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+
+   66 Mreturn: T_RETURN Expression
+   67        | /* empty */
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+T_OPENPAREN (258) 17 36 37 60 65
+T_CLOSEPAREN (259) 17 36 37 60 65
+T_OPENBRACKET (260) 4 17 41 42 43
+T_CLOSEBRACKET (261) 4 17 41 42 43
+T_COMMA (262) 18 25 38
+T_COLON (263) 18 19
+T_DOT (264) 35 37 58
+T_PLUS (265) 46
+T_MINUS (266) 47 56
+T_MULTIPLY (267) 48
+T_DIVIDE (268) 49
+T_LESS (269) 50
+T_LESSOREQL (270) 51
+T_EQUAL (271) 34 35
+T_AND (272) 53
+T_OR (273) 54
+T_NOT (274) 55
+T_EQUALS (275) 52
+T_ARROW (276) 17
+T_NEW (277) 64 65
+T_EXTENDS (278) 5
+T_TRUE (279) 62
+T_FALSE (280) 63
+T_NUMBER (281) 61
+T_IDENTIFIER (282) 4 5 10 13 17 18 19 25 26 34 35 36 37 57 58 64 65
+T_IF (283) 41 42
+T_ELSE (284) 42
+T_WHILE (285) 43
+T_PRINT (286) 45
+T_RETURN (287) 66
+TYPE_INTEGER (288) 12
+TYPE_BOOLEAN (289) 11
+T_NONE (290) 14
+
+
+Nonterminals, with rules where they appear
+
+$accept (36)
+    on left: 0
+Start (37)
+    on left: 1, on right: 0
+Classes (38)
+    on left: 2 3, on right: 1 2
+Class (39)
+    on left: 4, on right: 2
+Copt (40)
+    on left: 5 6, on right: 4
+Members (41)
+    on left: 7 8, on right: 4 7
+Member (42)
+    on left: 9, on right: 7
+Id (43)
+    on left: 10, on right: 9
+Type (44)
+    on left: 11 12 13 14, on right: 9 17 18 19 24
+Methods (45)
+    on left: 15 16, on right: 4 15
+Method (46)
+    on left: 17, on right: 15
+Parameters (47)
+    on left: 18 19 20, on right: 17 18
+Mbody (48)
+    on left: 21, on right: 17
+Declarations (49)
+    on left: 22 23, on right: 21 22
+Declaration (50)
+    on left: 24, on right: 22
+Identifiers (51)
+    on left: 25 26, on right: 24 25
+Statements (52)
+    on left: 27 28, on right: 21 27 44
+Statement (53)
+    on left: 29 30 31 32 33, on right: 27 44
+Assignments (54)
+    on left: 34 35, on right: 29
+Mcalls (55)
+    on left: 36 37, on right: 30 59
+Arg (56)
+    on left: 38 39 40, on right: 36 37 38 65
+IfElses (57)
+    on left: 41 42, on right: 31
+Whiles (58)
+    on left: 43, on right: 32
+Block (59)
+    on left: 44, on right: 41 42 43
+Prints (60)
+    on left: 45, on right: 33
+Expression (61)
+    on left: 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+    64 65, on right: 34 35 38 39 41 42 43 45 46 47 48 49 50 51 52 53
+    54 55 56 60 66
+Mreturn (62)
+    on left: 66 67, on right: 21
+
+
+State 0
+
+    0 $accept: . Start $end
+
+    $default  reduce using rule 3 (Classes)
+
+    Start    go to state 1
+    Classes  go to state 2
+
+
+State 1
+
+    0 $accept: Start . $end
+
+    $end  shift, and go to state 3
+
+
+State 2
+
+    1 Start: Classes .
+    2 Classes: Classes . Class
+
+    T_IDENTIFIER  shift, and go to state 4
+
+    $default  reduce using rule 1 (Start)
+
+    Class  go to state 5
+
+
+State 3
+
+    0 $accept: Start $end .
+
+    $default  accept
+
+
+State 4
+
+    4 Class: T_IDENTIFIER . Copt T_OPENBRACKET Members Methods T_CLOSEBRACKET
+
+    T_EXTENDS  shift, and go to state 6
+
+    $default  reduce using rule 6 (Copt)
+
+    Copt  go to state 7
+
+
+State 5
+
+    2 Classes: Classes Class .
+
+    $default  reduce using rule 2 (Classes)
+
+
+State 6
+
+    5 Copt: T_EXTENDS . T_IDENTIFIER
+
+    T_IDENTIFIER  shift, and go to state 8
+
+
+State 7
+
+    4 Class: T_IDENTIFIER Copt . T_OPENBRACKET Members Methods T_CLOSEBRACKET
+
+    T_OPENBRACKET  shift, and go to state 9
+
+
+State 8
+
+    5 Copt: T_EXTENDS T_IDENTIFIER .
+
+    $default  reduce using rule 5 (Copt)
+
+
+State 9
+
+    4 Class: T_IDENTIFIER Copt T_OPENBRACKET . Members Methods T_CLOSEBRACKET
+
+    $default  reduce using rule 8 (Members)
+
+    Members  go to state 10
+
+
+State 10
+
+    4 Class: T_IDENTIFIER Copt T_OPENBRACKET Members . Methods T_CLOSEBRACKET
+    7 Members: Members . Member
+
+    T_IDENTIFIER  shift, and go to state 11
+    TYPE_INTEGER  shift, and go to state 12
+    TYPE_BOOLEAN  shift, and go to state 13
+    T_NONE        shift, and go to state 14
+
+    $default  reduce using rule 16 (Methods)
+
+    Member   go to state 15
+    Type     go to state 16
+    Methods  go to state 17
+    Method   go to state 18
+
+
+State 11
+
+   13 Type: T_IDENTIFIER .
+   17 Method: T_IDENTIFIER . T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW Type T_OPENBRACKET Mbody T_CLOSEBRACKET
+
+    T_OPENPAREN  shift, and go to state 19
+
+    $default  reduce using rule 13 (Type)
+
+
+State 12
+
+   12 Type: TYPE_INTEGER .
+
+    $default  reduce using rule 12 (Type)
+
+
+State 13
+
+   11 Type: TYPE_BOOLEAN .
+
+    $default  reduce using rule 11 (Type)
+
+
+State 14
+
+   14 Type: T_NONE .
+
+    $default  reduce using rule 14 (Type)
+
+
+State 15
+
+    7 Members: Members Member .
+
+    $default  reduce using rule 7 (Members)
+
+
+State 16
+
+    9 Member: Type . Id
+
+    T_IDENTIFIER  shift, and go to state 20
+
+    Id  go to state 21
+
+
+State 17
+
+    4 Class: T_IDENTIFIER Copt T_OPENBRACKET Members Methods . T_CLOSEBRACKET
+
+    T_CLOSEBRACKET  shift, and go to state 22
+
+
+State 18
+
+   15 Methods: Method . Methods
+
+    T_IDENTIFIER  shift, and go to state 23
+
+    $default  reduce using rule 16 (Methods)
+
+    Methods  go to state 24
+    Method   go to state 18
+
+
+State 19
+
+   17 Method: T_IDENTIFIER T_OPENPAREN . Parameters T_CLOSEPAREN T_ARROW Type T_OPENBRACKET Mbody T_CLOSEBRACKET
+
+    T_IDENTIFIER  shift, and go to state 25
+
+    $default  reduce using rule 20 (Parameters)
+
+    Parameters  go to state 26
+
+
+State 20
+
+   10 Id: T_IDENTIFIER .
+
+    $default  reduce using rule 10 (Id)
+
+
+State 21
+
+    9 Member: Type Id .
+
+    $default  reduce using rule 9 (Member)
+
+
+State 22
+
+    4 Class: T_IDENTIFIER Copt T_OPENBRACKET Members Methods T_CLOSEBRACKET .
+
+    $default  reduce using rule 4 (Class)
+
+
+State 23
+
+   17 Method: T_IDENTIFIER . T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW Type T_OPENBRACKET Mbody T_CLOSEBRACKET
+
+    T_OPENPAREN  shift, and go to state 19
+
+
+State 24
+
+   15 Methods: Method Methods .
+
+    $default  reduce using rule 15 (Methods)
+
+
+State 25
+
+   19 Parameters: T_IDENTIFIER . T_COLON Type
+
+    T_COLON  shift, and go to state 27
+
+
+State 26
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters . T_CLOSEPAREN T_ARROW Type T_OPENBRACKET Mbody T_CLOSEBRACKET
+   18 Parameters: Parameters . T_COMMA T_IDENTIFIER T_COLON Type
+
+    T_CLOSEPAREN  shift, and go to state 28
+    T_COMMA       shift, and go to state 29
+
+
+State 27
+
+   19 Parameters: T_IDENTIFIER T_COLON . Type
+
+    T_IDENTIFIER  shift, and go to state 30
+    TYPE_INTEGER  shift, and go to state 12
+    TYPE_BOOLEAN  shift, and go to state 13
+    T_NONE        shift, and go to state 14
+
+    Type  go to state 31
+
+
+State 28
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters T_CLOSEPAREN . T_ARROW Type T_OPENBRACKET Mbody T_CLOSEBRACKET
+
+    T_ARROW  shift, and go to state 32
+
+
+State 29
+
+   18 Parameters: Parameters T_COMMA . T_IDENTIFIER T_COLON Type
+
+    T_IDENTIFIER  shift, and go to state 33
+
+
+State 30
+
+   13 Type: T_IDENTIFIER .
+
+    $default  reduce using rule 13 (Type)
+
+
+State 31
+
+   19 Parameters: T_IDENTIFIER T_COLON Type .
+
+    $default  reduce using rule 19 (Parameters)
+
+
+State 32
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW . Type T_OPENBRACKET Mbody T_CLOSEBRACKET
+
+    T_IDENTIFIER  shift, and go to state 30
+    TYPE_INTEGER  shift, and go to state 12
+    TYPE_BOOLEAN  shift, and go to state 13
+    T_NONE        shift, and go to state 14
+
+    Type  go to state 34
+
+
+State 33
+
+   18 Parameters: Parameters T_COMMA T_IDENTIFIER . T_COLON Type
+
+    T_COLON  shift, and go to state 35
+
+
+State 34
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW Type . T_OPENBRACKET Mbody T_CLOSEBRACKET
+
+    T_OPENBRACKET  shift, and go to state 36
+
+
+State 35
+
+   18 Parameters: Parameters T_COMMA T_IDENTIFIER T_COLON . Type
+
+    T_IDENTIFIER  shift, and go to state 30
+    TYPE_INTEGER  shift, and go to state 12
+    TYPE_BOOLEAN  shift, and go to state 13
+    T_NONE        shift, and go to state 14
+
+    Type  go to state 37
+
+
+State 36
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW Type T_OPENBRACKET . Mbody T_CLOSEBRACKET
+
+    $default  reduce using rule 23 (Declarations)
+
+    Mbody         go to state 38
+    Declarations  go to state 39
+
+
+State 37
+
+   18 Parameters: Parameters T_COMMA T_IDENTIFIER T_COLON Type .
+
+    $default  reduce using rule 18 (Parameters)
+
+
+State 38
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW Type T_OPENBRACKET Mbody . T_CLOSEBRACKET
+
+    T_CLOSEBRACKET  shift, and go to state 40
+
+
+State 39
+
+   21 Mbody: Declarations . Statements Mreturn
+   22 Declarations: Declarations . Declaration
+
+    T_IDENTIFIER  shift, and go to state 41
+    T_IF          shift, and go to state 42
+    T_WHILE       shift, and go to state 43
+    T_PRINT       shift, and go to state 44
+    TYPE_INTEGER  shift, and go to state 12
+    TYPE_BOOLEAN  shift, and go to state 13
+    T_NONE        shift, and go to state 14
+
+    $default  reduce using rule 28 (Statements)
+
+    Type         go to state 45
+    Declaration  go to state 46
+    Statements   go to state 47
+    Statement    go to state 48
+    Assignments  go to state 49
+    Mcalls       go to state 50
+    IfElses      go to state 51
+    Whiles       go to state 52
+    Prints       go to state 53
+
+
+State 40
+
+   17 Method: T_IDENTIFIER T_OPENPAREN Parameters T_CLOSEPAREN T_ARROW Type T_OPENBRACKET Mbody T_CLOSEBRACKET .
+
+    $default  reduce using rule 17 (Method)
+
+
+State 41
+
+   13 Type: T_IDENTIFIER .
+   34 Assignments: T_IDENTIFIER . T_EQUAL Expression
+   35            | T_IDENTIFIER . T_DOT T_IDENTIFIER T_EQUAL Expression
+   36 Mcalls: T_IDENTIFIER . T_OPENPAREN Arg T_CLOSEPAREN
+   37       | T_IDENTIFIER . T_DOT T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+
+    T_OPENPAREN  shift, and go to state 54
+    T_DOT        shift, and go to state 55
+    T_EQUAL      shift, and go to state 56
+
+    $default  reduce using rule 13 (Type)
+
+
+State 42
+
+   41 IfElses: T_IF . Expression T_OPENBRACKET Block T_CLOSEBRACKET
+   42        | T_IF . Expression T_OPENBRACKET Block T_CLOSEBRACKET T_ELSE T_OPENBRACKET Block T_CLOSEBRACKET
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 66
+
+
+State 43
+
+   43 Whiles: T_WHILE . Expression T_OPENBRACKET Block T_CLOSEBRACKET
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 67
+
+
+State 44
+
+   45 Prints: T_PRINT . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 68
+
+
+State 45
+
+   24 Declaration: Type . Identifiers
+
+    T_IDENTIFIER  shift, and go to state 69
+
+    Identifiers  go to state 70
+
+
+State 46
+
+   22 Declarations: Declarations Declaration .
+
+    $default  reduce using rule 22 (Declarations)
+
+
+State 47
+
+   21 Mbody: Declarations Statements . Mreturn
+
+    T_RETURN  shift, and go to state 71
+
+    $default  reduce using rule 67 (Mreturn)
+
+    Mreturn  go to state 72
+
+
+State 48
+
+   27 Statements: Statement . Statements
+
+    T_IDENTIFIER  shift, and go to state 73
+    T_IF          shift, and go to state 42
+    T_WHILE       shift, and go to state 43
+    T_PRINT       shift, and go to state 44
+
+    $default  reduce using rule 28 (Statements)
+
+    Statements   go to state 74
+    Statement    go to state 48
+    Assignments  go to state 49
+    Mcalls       go to state 50
+    IfElses      go to state 51
+    Whiles       go to state 52
+    Prints       go to state 53
+
+
+State 49
+
+   29 Statement: Assignments .
+
+    $default  reduce using rule 29 (Statement)
+
+
+State 50
+
+   30 Statement: Mcalls .
+
+    $default  reduce using rule 30 (Statement)
+
+
+State 51
+
+   31 Statement: IfElses .
+
+    $default  reduce using rule 31 (Statement)
+
+
+State 52
+
+   32 Statement: Whiles .
+
+    $default  reduce using rule 32 (Statement)
+
+
+State 53
+
+   33 Statement: Prints .
+
+    $default  reduce using rule 33 (Statement)
+
+
+State 54
+
+   36 Mcalls: T_IDENTIFIER T_OPENPAREN . Arg T_CLOSEPAREN
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    $default  reduce using rule 40 (Arg)
+
+    Mcalls      go to state 65
+    Arg         go to state 75
+    Expression  go to state 76
+
+
+State 55
+
+   35 Assignments: T_IDENTIFIER T_DOT . T_IDENTIFIER T_EQUAL Expression
+   37 Mcalls: T_IDENTIFIER T_DOT . T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+
+    T_IDENTIFIER  shift, and go to state 77
+
+
+State 56
+
+   34 Assignments: T_IDENTIFIER T_EQUAL . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 78
+
+
+State 57
+
+   60 Expression: T_OPENPAREN . Expression T_CLOSEPAREN
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 79
+
+
+State 58
+
+   56 Expression: T_MINUS . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 80
+
+
+State 59
+
+   55 Expression: T_NOT . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 81
+
+
+State 60
+
+   64 Expression: T_NEW . T_IDENTIFIER
+   65           | T_NEW . T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+
+    T_IDENTIFIER  shift, and go to state 82
+
+
+State 61
+
+   62 Expression: T_TRUE .
+
+    $default  reduce using rule 62 (Expression)
+
+
+State 62
+
+   63 Expression: T_FALSE .
+
+    $default  reduce using rule 63 (Expression)
+
+
+State 63
+
+   61 Expression: T_NUMBER .
+
+    $default  reduce using rule 61 (Expression)
+
+
+State 64
+
+   36 Mcalls: T_IDENTIFIER . T_OPENPAREN Arg T_CLOSEPAREN
+   37       | T_IDENTIFIER . T_DOT T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+   57 Expression: T_IDENTIFIER .
+   58           | T_IDENTIFIER . T_DOT T_IDENTIFIER
+
+    T_OPENPAREN  shift, and go to state 54
+    T_DOT        shift, and go to state 83
+
+    $default  reduce using rule 57 (Expression)
+
+
+State 65
+
+   59 Expression: Mcalls .
+
+    $default  reduce using rule 59 (Expression)
+
+
+State 66
+
+   41 IfElses: T_IF Expression . T_OPENBRACKET Block T_CLOSEBRACKET
+   42        | T_IF Expression . T_OPENBRACKET Block T_CLOSEBRACKET T_ELSE T_OPENBRACKET Block T_CLOSEBRACKET
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_OPENBRACKET  shift, and go to state 84
+    T_PLUS         shift, and go to state 85
+    T_MINUS        shift, and go to state 86
+    T_MULTIPLY     shift, and go to state 87
+    T_DIVIDE       shift, and go to state 88
+    T_LESS         shift, and go to state 89
+    T_LESSOREQL    shift, and go to state 90
+    T_AND          shift, and go to state 91
+    T_OR           shift, and go to state 92
+    T_EQUALS       shift, and go to state 93
+
+
+State 67
+
+   43 Whiles: T_WHILE Expression . T_OPENBRACKET Block T_CLOSEBRACKET
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_OPENBRACKET  shift, and go to state 94
+    T_PLUS         shift, and go to state 85
+    T_MINUS        shift, and go to state 86
+    T_MULTIPLY     shift, and go to state 87
+    T_DIVIDE       shift, and go to state 88
+    T_LESS         shift, and go to state 89
+    T_LESSOREQL    shift, and go to state 90
+    T_AND          shift, and go to state 91
+    T_OR           shift, and go to state 92
+    T_EQUALS       shift, and go to state 93
+
+
+State 68
+
+   45 Prints: T_PRINT Expression .
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_AND        shift, and go to state 91
+    T_OR         shift, and go to state 92
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 45 (Prints)
+
+
+State 69
+
+   25 Identifiers: T_IDENTIFIER . T_COMMA Identifiers
+   26            | T_IDENTIFIER .
+
+    T_COMMA  shift, and go to state 95
+
+    $default  reduce using rule 26 (Identifiers)
+
+
+State 70
+
+   24 Declaration: Type Identifiers .
+
+    $default  reduce using rule 24 (Declaration)
+
+
+State 71
+
+   66 Mreturn: T_RETURN . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 96
+
+
+State 72
+
+   21 Mbody: Declarations Statements Mreturn .
+
+    $default  reduce using rule 21 (Mbody)
+
+
+State 73
+
+   34 Assignments: T_IDENTIFIER . T_EQUAL Expression
+   35            | T_IDENTIFIER . T_DOT T_IDENTIFIER T_EQUAL Expression
+   36 Mcalls: T_IDENTIFIER . T_OPENPAREN Arg T_CLOSEPAREN
+   37       | T_IDENTIFIER . T_DOT T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+
+    T_OPENPAREN  shift, and go to state 54
+    T_DOT        shift, and go to state 55
+    T_EQUAL      shift, and go to state 56
+
+
+State 74
+
+   27 Statements: Statement Statements .
+
+    $default  reduce using rule 27 (Statements)
+
+
+State 75
+
+   36 Mcalls: T_IDENTIFIER T_OPENPAREN Arg . T_CLOSEPAREN
+   38 Arg: Arg . T_COMMA Expression
+
+    T_CLOSEPAREN  shift, and go to state 97
+    T_COMMA       shift, and go to state 98
+
+
+State 76
+
+   39 Arg: Expression .
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_AND        shift, and go to state 91
+    T_OR         shift, and go to state 92
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 39 (Arg)
+
+
+State 77
+
+   35 Assignments: T_IDENTIFIER T_DOT T_IDENTIFIER . T_EQUAL Expression
+   37 Mcalls: T_IDENTIFIER T_DOT T_IDENTIFIER . T_OPENPAREN Arg T_CLOSEPAREN
+
+    T_OPENPAREN  shift, and go to state 99
+    T_EQUAL      shift, and go to state 100
+
+
+State 78
+
+   34 Assignments: T_IDENTIFIER T_EQUAL Expression .
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_AND        shift, and go to state 91
+    T_OR         shift, and go to state 92
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 34 (Assignments)
+
+
+State 79
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+   60           | T_OPENPAREN Expression . T_CLOSEPAREN
+
+    T_CLOSEPAREN  shift, and go to state 101
+    T_PLUS        shift, and go to state 85
+    T_MINUS       shift, and go to state 86
+    T_MULTIPLY    shift, and go to state 87
+    T_DIVIDE      shift, and go to state 88
+    T_LESS        shift, and go to state 89
+    T_LESSOREQL   shift, and go to state 90
+    T_AND         shift, and go to state 91
+    T_OR          shift, and go to state 92
+    T_EQUALS      shift, and go to state 93
+
+
+State 80
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+   56           | T_MINUS Expression .
+
+    $default  reduce using rule 56 (Expression)
+
+
+State 81
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+   55           | T_NOT Expression .
+
+    $default  reduce using rule 55 (Expression)
+
+
+State 82
+
+   64 Expression: T_NEW T_IDENTIFIER .
+   65           | T_NEW T_IDENTIFIER . T_OPENPAREN Arg T_CLOSEPAREN
+
+    T_OPENPAREN  shift, and go to state 102
+
+    $default  reduce using rule 64 (Expression)
+
+
+State 83
+
+   37 Mcalls: T_IDENTIFIER T_DOT . T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN
+   58 Expression: T_IDENTIFIER T_DOT . T_IDENTIFIER
+
+    T_IDENTIFIER  shift, and go to state 103
+
+
+State 84
+
+   41 IfElses: T_IF Expression T_OPENBRACKET . Block T_CLOSEBRACKET
+   42        | T_IF Expression T_OPENBRACKET . Block T_CLOSEBRACKET T_ELSE T_OPENBRACKET Block T_CLOSEBRACKET
+
+    T_IDENTIFIER  shift, and go to state 73
+    T_IF          shift, and go to state 42
+    T_WHILE       shift, and go to state 43
+    T_PRINT       shift, and go to state 44
+
+    Statement    go to state 104
+    Assignments  go to state 49
+    Mcalls       go to state 50
+    IfElses      go to state 51
+    Whiles       go to state 52
+    Block        go to state 105
+    Prints       go to state 53
+
+
+State 85
+
+   46 Expression: Expression T_PLUS . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 106
+
+
+State 86
+
+   47 Expression: Expression T_MINUS . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 107
+
+
+State 87
+
+   48 Expression: Expression T_MULTIPLY . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 108
+
+
+State 88
+
+   49 Expression: Expression T_DIVIDE . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 109
+
+
+State 89
+
+   50 Expression: Expression T_LESS . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 110
+
+
+State 90
+
+   51 Expression: Expression T_LESSOREQL . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 111
+
+
+State 91
+
+   53 Expression: Expression T_AND . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 112
+
+
+State 92
+
+   54 Expression: Expression T_OR . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 113
+
+
+State 93
+
+   52 Expression: Expression T_EQUALS . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 114
+
+
+State 94
+
+   43 Whiles: T_WHILE Expression T_OPENBRACKET . Block T_CLOSEBRACKET
+
+    T_IDENTIFIER  shift, and go to state 73
+    T_IF          shift, and go to state 42
+    T_WHILE       shift, and go to state 43
+    T_PRINT       shift, and go to state 44
+
+    Statement    go to state 104
+    Assignments  go to state 49
+    Mcalls       go to state 50
+    IfElses      go to state 51
+    Whiles       go to state 52
+    Block        go to state 115
+    Prints       go to state 53
+
+
+State 95
+
+   25 Identifiers: T_IDENTIFIER T_COMMA . Identifiers
+
+    T_IDENTIFIER  shift, and go to state 69
+
+    Identifiers  go to state 116
+
+
+State 96
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+   66 Mreturn: T_RETURN Expression .
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_AND        shift, and go to state 91
+    T_OR         shift, and go to state 92
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 66 (Mreturn)
+
+
+State 97
+
+   36 Mcalls: T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN .
+
+    $default  reduce using rule 36 (Mcalls)
+
+
+State 98
+
+   38 Arg: Arg T_COMMA . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 117
+
+
+State 99
+
+   37 Mcalls: T_IDENTIFIER T_DOT T_IDENTIFIER T_OPENPAREN . Arg T_CLOSEPAREN
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    $default  reduce using rule 40 (Arg)
+
+    Mcalls      go to state 65
+    Arg         go to state 118
+    Expression  go to state 76
+
+
+State 100
+
+   35 Assignments: T_IDENTIFIER T_DOT T_IDENTIFIER T_EQUAL . Expression
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    Mcalls      go to state 65
+    Expression  go to state 119
+
+
+State 101
+
+   60 Expression: T_OPENPAREN Expression T_CLOSEPAREN .
+
+    $default  reduce using rule 60 (Expression)
+
+
+State 102
+
+   65 Expression: T_NEW T_IDENTIFIER T_OPENPAREN . Arg T_CLOSEPAREN
+
+    T_OPENPAREN   shift, and go to state 57
+    T_MINUS       shift, and go to state 58
+    T_NOT         shift, and go to state 59
+    T_NEW         shift, and go to state 60
+    T_TRUE        shift, and go to state 61
+    T_FALSE       shift, and go to state 62
+    T_NUMBER      shift, and go to state 63
+    T_IDENTIFIER  shift, and go to state 64
+
+    $default  reduce using rule 40 (Arg)
+
+    Mcalls      go to state 65
+    Arg         go to state 120
+    Expression  go to state 76
+
+
+State 103
+
+   37 Mcalls: T_IDENTIFIER T_DOT T_IDENTIFIER . T_OPENPAREN Arg T_CLOSEPAREN
+   58 Expression: T_IDENTIFIER T_DOT T_IDENTIFIER .
+
+    T_OPENPAREN  shift, and go to state 99
+
+    $default  reduce using rule 58 (Expression)
+
+
+State 104
+
+   44 Block: Statement . Statements
+
+    T_IDENTIFIER  shift, and go to state 73
+    T_IF          shift, and go to state 42
+    T_WHILE       shift, and go to state 43
+    T_PRINT       shift, and go to state 44
+
+    $default  reduce using rule 28 (Statements)
+
+    Statements   go to state 121
+    Statement    go to state 48
+    Assignments  go to state 49
+    Mcalls       go to state 50
+    IfElses      go to state 51
+    Whiles       go to state 52
+    Prints       go to state 53
+
+
+State 105
+
+   41 IfElses: T_IF Expression T_OPENBRACKET Block . T_CLOSEBRACKET
+   42        | T_IF Expression T_OPENBRACKET Block . T_CLOSEBRACKET T_ELSE T_OPENBRACKET Block T_CLOSEBRACKET
+
+    T_CLOSEBRACKET  shift, and go to state 122
+
+
+State 106
+
+   46 Expression: Expression . T_PLUS Expression
+   46           | Expression T_PLUS Expression .
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_MULTIPLY  shift, and go to state 87
+    T_DIVIDE    shift, and go to state 88
+
+    $default  reduce using rule 46 (Expression)
+
+
+State 107
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   47           | Expression T_MINUS Expression .
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_MULTIPLY  shift, and go to state 87
+    T_DIVIDE    shift, and go to state 88
+
+    $default  reduce using rule 47 (Expression)
+
+
+State 108
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   48           | Expression T_MULTIPLY Expression .
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    $default  reduce using rule 48 (Expression)
+
+
+State 109
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   49           | Expression T_DIVIDE Expression .
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    $default  reduce using rule 49 (Expression)
+
+
+State 110
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   50           | Expression T_LESS Expression .
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS      shift, and go to state 85
+    T_MINUS     shift, and go to state 86
+    T_MULTIPLY  shift, and go to state 87
+    T_DIVIDE    shift, and go to state 88
+
+    $default  reduce using rule 50 (Expression)
+
+
+State 111
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   51           | Expression T_LESSOREQL Expression .
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS      shift, and go to state 85
+    T_MINUS     shift, and go to state 86
+    T_MULTIPLY  shift, and go to state 87
+    T_DIVIDE    shift, and go to state 88
+
+    $default  reduce using rule 51 (Expression)
+
+
+State 112
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   53           | Expression T_AND Expression .
+   54           | Expression . T_OR Expression
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 53 (Expression)
+
+
+State 113
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+   54           | Expression T_OR Expression .
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_AND        shift, and go to state 91
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 54 (Expression)
+
+
+State 114
+
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   52           | Expression T_EQUALS Expression .
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS      shift, and go to state 85
+    T_MINUS     shift, and go to state 86
+    T_MULTIPLY  shift, and go to state 87
+    T_DIVIDE    shift, and go to state 88
+
+    $default  reduce using rule 52 (Expression)
+
+
+State 115
+
+   43 Whiles: T_WHILE Expression T_OPENBRACKET Block . T_CLOSEBRACKET
+
+    T_CLOSEBRACKET  shift, and go to state 123
+
+
+State 116
+
+   25 Identifiers: T_IDENTIFIER T_COMMA Identifiers .
+
+    $default  reduce using rule 25 (Identifiers)
+
+
+State 117
+
+   38 Arg: Arg T_COMMA Expression .
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_AND        shift, and go to state 91
+    T_OR         shift, and go to state 92
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 38 (Arg)
+
+
+State 118
+
+   37 Mcalls: T_IDENTIFIER T_DOT T_IDENTIFIER T_OPENPAREN Arg . T_CLOSEPAREN
+   38 Arg: Arg . T_COMMA Expression
+
+    T_CLOSEPAREN  shift, and go to state 124
+    T_COMMA       shift, and go to state 98
+
+
+State 119
+
+   35 Assignments: T_IDENTIFIER T_DOT T_IDENTIFIER T_EQUAL Expression .
+   46 Expression: Expression . T_PLUS Expression
+   47           | Expression . T_MINUS Expression
+   48           | Expression . T_MULTIPLY Expression
+   49           | Expression . T_DIVIDE Expression
+   50           | Expression . T_LESS Expression
+   51           | Expression . T_LESSOREQL Expression
+   52           | Expression . T_EQUALS Expression
+   53           | Expression . T_AND Expression
+   54           | Expression . T_OR Expression
+
+    T_PLUS       shift, and go to state 85
+    T_MINUS      shift, and go to state 86
+    T_MULTIPLY   shift, and go to state 87
+    T_DIVIDE     shift, and go to state 88
+    T_LESS       shift, and go to state 89
+    T_LESSOREQL  shift, and go to state 90
+    T_AND        shift, and go to state 91
+    T_OR         shift, and go to state 92
+    T_EQUALS     shift, and go to state 93
+
+    $default  reduce using rule 35 (Assignments)
+
+
+State 120
+
+   38 Arg: Arg . T_COMMA Expression
+   65 Expression: T_NEW T_IDENTIFIER T_OPENPAREN Arg . T_CLOSEPAREN
+
+    T_CLOSEPAREN  shift, and go to state 125
+    T_COMMA       shift, and go to state 98
+
+
+State 121
+
+   44 Block: Statement Statements .
+
+    $default  reduce using rule 44 (Block)
+
+
+State 122
+
+   41 IfElses: T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET .
+   42        | T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET . T_ELSE T_OPENBRACKET Block T_CLOSEBRACKET
+
+    T_ELSE  shift, and go to state 126
+
+    $default  reduce using rule 41 (IfElses)
+
+
+State 123
+
+   43 Whiles: T_WHILE Expression T_OPENBRACKET Block T_CLOSEBRACKET .
+
+    $default  reduce using rule 43 (Whiles)
+
+
+State 124
+
+   37 Mcalls: T_IDENTIFIER T_DOT T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN .
+
+    $default  reduce using rule 37 (Mcalls)
+
+
+State 125
+
+   65 Expression: T_NEW T_IDENTIFIER T_OPENPAREN Arg T_CLOSEPAREN .
+
+    $default  reduce using rule 65 (Expression)
+
+
+State 126
+
+   42 IfElses: T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET T_ELSE . T_OPENBRACKET Block T_CLOSEBRACKET
+
+    T_OPENBRACKET  shift, and go to state 127
+
+
+State 127
+
+   42 IfElses: T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET T_ELSE T_OPENBRACKET . Block T_CLOSEBRACKET
+
+    T_IDENTIFIER  shift, and go to state 73
+    T_IF          shift, and go to state 42
+    T_WHILE       shift, and go to state 43
+    T_PRINT       shift, and go to state 44
+
+    Statement    go to state 104
+    Assignments  go to state 49
+    Mcalls       go to state 50
+    IfElses      go to state 51
+    Whiles       go to state 52
+    Block        go to state 128
+    Prints       go to state 53
+
+
+State 128
+
+   42 IfElses: T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET T_ELSE T_OPENBRACKET Block . T_CLOSEBRACKET
+
+    T_CLOSEBRACKET  shift, and go to state 129
+
+
+State 129
+
+   42 IfElses: T_IF Expression T_OPENBRACKET Block T_CLOSEBRACKET T_ELSE T_OPENBRACKET Block T_CLOSEBRACKET .
+
+    $default  reduce using rule 42 (IfElses)

@@ -1,0 +1,66 @@
+c0 {
+    f0(a0 : integer) -> integer {
+        while (true) {
+            print 190
+            if 131 {
+                if 73 {
+                    print 253
+                    while 226 {
+                        print true
+                        print 154
+                        }
+                    
+                    } else {
+                print 151
+                print 36 * f0(143, false)
+                f0(74)
+                }
+                
+                print 234
+                f0(true)
+                } else {
+            f0(93)
+            while f0(153) {
+                print false equals 214
+                f0(f0(231))
+                f0((144))
+                f0(f0(147, true, f0(true)) and 224 <= false)
+                }
+            
+            print 252 / 236
+            }
+            
+            f0(145)
+            }
+        
+        while (76) {
+            while 22 {
+                print false
+                f0(f0(true))
+                print 133
+                f0(f0(49))
+                }
+            
+            print 87
+            print 155
+            f0(201)
+            }
+        
+        return true * 101
+        }
+    f1(a0 : boolean, a1 : boolean, a2 : integer) -> integer {
+        boolean l0, l1
+        f0(false, l1 * f1(l1, 32), true)
+        l0 = false
+        l1 = f0(98)
+        return 150 < true
+        }
+    f2(a0 : boolean, a1 : boolean, a2 : integer, a3 : integer) -> boolean {
+        integer l0
+        l0 = 155
+        l0 = 153
+        f0(true, (false), 189)
+        f2(12)
+        return false
+        }
+    }

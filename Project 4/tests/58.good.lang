@@ -1,0 +1,39 @@
+c0 {
+    boolean m0
+    boolean m1
+    integer m2
+    boolean m3
+    f0(a0 : boolean) -> integer {
+        integer l0, l1, l2, l3, l4, l5, l6, l7, l8, l9
+        l3 = 46 * 226
+        f0(true)
+        while l6 {
+            l3 = false
+            }
+        
+        return f0(true and l4, f0(true), false, f0(true, f0(f0(l1, 153))), f0(l0))
+        }
+    f1() -> integer {
+        print f1(54)
+        print 10
+        print false < 35
+        return 111 and f1(false)
+        }
+    }
+c1 extends c0 {
+    c0 m0
+    c0 m1
+    f0(a0 : c0, a1 : c0) -> c0 {
+        c0 l0, l1
+        c0 l2, l3, l4, l5, l6, l7
+        c0 l8, l9
+        c0 l10, l11, l12, l13, l14
+        l11.m3 = new c0
+        while false {
+            print new c0 ( new c0, -new c0 ( new c0 )  )  - new c0
+            l1.f0(f0(new c0), new c0)
+            }
+        
+        return l4.m2
+        }
+    }

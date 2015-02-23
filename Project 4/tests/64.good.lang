@@ -1,0 +1,124 @@
+c0 {
+    boolean m0
+    f0(a0 : boolean) -> boolean {
+        return false
+        }
+    }
+c1 extends c0 {
+    integer m0
+    f0() -> c0 {
+        return false * true
+        }
+    f1(a0 : boolean) -> c0 {
+        if true {
+            f0(true)
+            f0(241)
+            f1(false)
+            } else {
+        f0(new c0 ( new c0 )  equals 64, f0(false), 93)
+        print false
+        }
+        
+        return true
+        }
+    f2() -> c0 {
+        integer l0, l1
+        f0(false)
+        f0(true, new c0 ( l1 )  / f0((f2(l0, 62))))
+        return new c0 ( f0(false), new c0, false ) 
+        }
+    }
+c2 {
+    c1 m0
+    c1 m1
+    c0 m2
+    c0 m3
+    c1 m4
+    c0 m5
+    c0 m6
+    c0 m7
+    c0 m8
+    c0 m9
+    c1 m10
+    c0 m11
+    c0 m12
+    c1 m13
+    c1 m14
+    c1 m15
+    c0 m16
+    f0(a0 : c1, a1 : c1) -> c0 {
+        boolean l0, l1, l2, l3, l4
+        c0 l5
+        c1 l6, l7, l8
+        c1 l9, l10, l11, l12, l13
+        c1 l14
+        c0 l15
+        c0 l16, l17, l18, l19, l20, l21, l22, l23, l24, l25
+        c1 l26, l27, l28, l29, l30, l31
+        c1 l32, l33
+        integer l34, l35, l36, l37, l38, l39, l40
+        c0 l41, l42, l43
+        c0 l44, l45, l46, l47, l48, l49, l50
+        c0 l51, l52, l53, l54, l55, l56, l57
+        c1 l58
+        c0 l59
+        c1 l60, l61, l62, l63, l64, l65, l66
+        c0 l67, l68, l69
+        c1 l70
+        c0 l71
+        c1 l72
+        c0 l73
+        integer l74, l75, l76
+        c0 l77, l78, l79
+        c1 l80, l81, l82, l83, l84
+        integer l85
+        c1 l86, l87, l88, l89, l90
+        c0 l91, l92
+        c1 l93, l94, l95, l96, l97, l98, l99, l100, l101, l102
+        c0 l103, l104, l105
+        c1 l106, l107, l108
+        c1 l109, l110, l111
+        c1 l112
+        c1 l113, l114, l115, l116
+        c0 l117, l118, l119, l120, l121, l122, l123, l124
+        if false {
+            while true equals new c1 {
+                l63.f2(false)
+                }
+            
+            l33.f0(l75)
+            }
+        
+        return true + true
+        }
+    f1(a0 : c1) -> boolean {
+        c0 l0, l1
+        c1 l2, l3
+        c0 l4, l5, l6, l7, l8, l9
+        c1 l10
+        c1 l11, l12, l13
+        boolean l14, l15, l16, l17
+        c1 l18, l19
+        l10.f0(l18.m0)
+        return new c0
+        }
+    }
+c3 {
+    boolean m0
+    c2 m1
+    boolean m2
+    c0 m3
+    f0(a0 : c2, a1 : c0, a2 : c2, a3 : c2, a4 : c0, a5 : c2) -> none {
+        c2 l0, l1
+        c2 l2, l3
+        integer l4
+        l0.m8 = new c0 ( false ) 
+        
+        }
+    f1(a0 : c0, a1 : c2) -> c2 {
+        f0(true)
+        print new c2 ( false + f1(true), f0(69) / f1(true) ) 
+        f1(true)
+        return new c0 + f1(f0(f0(new c0 ( new c0 ( 185, new c1 ( 111 ) , 75 )  ) , 56)))
+        }
+    }

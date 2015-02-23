@@ -1,0 +1,49 @@
+c0 {
+    boolean m0
+    f0(a0 : integer) -> integer {
+        while false {
+            while f0(217 and 24) {
+                print true
+                print true
+                f0(52)
+                f0(184, 80)
+                }
+            
+            print 175
+            f0(6)
+            f0(f0(f0(158 or f0(false) - 147) equals 24, 200), false)
+            }
+        
+        print 97
+        return 192 + false
+        }
+    }
+c1 extends c0 {
+    f0() -> none {
+        while 209 and new c0 ( 213, 100 )  {
+            if new c0 ( 19 )  or new c0 {
+                print new c0
+                f0(f0(new c0), true)
+                }
+            
+            if new c0 ( not false, false )  * 150 {
+                print new c0 ( new c0 ( false, new c0 )  ) 
+                f0(new c0 ( new c0, (new c0), 42 ) )
+                f0(f0(true))
+                print false and 107
+                }
+            
+            }
+        
+        print new c0
+        
+        }
+    f1(a0 : c0) -> boolean {
+        c0 l0
+        f0(new c0 ( 69, true ) )
+        return true * new c0
+        }
+    f2() -> c0 {
+        return new c0
+        }
+    }

@@ -1,0 +1,13 @@
+c0 {
+    f0() -> boolean {
+        integer l0, l1, l2
+        integer l3
+        if l3 equals 243 {
+            f0(135)
+            f0(l0)
+            }
+        
+        f0(166, true)
+        return true
+        }
+    }

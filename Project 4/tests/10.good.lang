@@ -1,0 +1,18 @@
+c0 {
+    integer m0
+    integer m1
+    integer m2
+    }
+c1 {
+    c0 m0
+    c0 m1
+    integer m2
+    c0 m3
+    integer m4
+    f0() -> boolean {
+        c0 l0, l1, l2
+        c0 l3, l4, l5, l6, l7, l8, l9
+        l8.m1 = 194
+        return l0.m1
+        }
+    }

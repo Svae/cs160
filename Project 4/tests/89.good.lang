@@ -1,0 +1,126 @@
+c0 {
+    boolean m0
+    boolean m1
+    f0(a0 : boolean, a1 : integer) -> none {
+        
+        }
+    }
+c1 {
+    c0 m0
+    f0(a0 : c0) -> c0 {
+        while new c0 and new c0 ( true, false )  {
+            if new c0 ( new c0 )  {
+                if f0(new c0) equals 166 {
+                    f0(true)
+                    print true
+                    if f0(false, false) {
+                        print new c0 ( f0(true or 195) ) 
+                        print 216 equals true
+                        print false
+                        }
+                    
+                    } else {
+                f0(false)
+                print false
+                print false
+                f0(false)
+                print -true
+                }
+                
+                f0(false)
+                } else {
+            print new c0 ( 218 ) 
+            f0(new c0)
+            }
+            
+            }
+        
+        return 214
+        }
+    }
+c2 {
+    f0(a0 : c1) -> none {
+        f0(178)
+        if -151 {
+            print new c0
+            f0(new c0, new c1)
+            if false {
+                f0(96, false < true)
+                } else {
+            print new c0 ( 16 ) 
+            print false and true
+            print new c0 / false
+            }
+            
+            } else {
+        f0(new c0 ( new c1 ) )
+        f0(new c0)
+        f0(true)
+        f0(false)
+        }
+        
+        
+        }
+    }
+c3 extends c2 {
+    integer m0
+    c1 m1
+    c1 m2
+    c0 m3
+    c2 m4
+    f0(a0 : c2) -> c2 {
+        f0(false)
+        f0(171, 108)
+        print true <= new c0
+        return true
+        }
+    f1(a0 : c1) -> c2 {
+        c0 l0, l1, l2
+        while true + false {
+            l2.f0(220, false)
+            l0.f0(false)
+            l0.f0(new c1)
+            }
+        
+        l2.f0(true or true)
+        return f0(l2.m1)
+        }
+    }
+c4 extends c0 {
+    c1 m0
+    boolean m1
+    c0 m2
+    c1 m3
+    f0(a0 : c1) -> c2 {
+        if 59 {
+            if f0(false, 61) {
+                print 21
+                f0(f0(25))
+                }
+            
+            while 93 {
+                print new c0 ( false ) 
+                print (new c0 ( new c0 ) )
+                print true
+                }
+            
+            print f0(108) / 216
+            }
+        
+        return f0(51) or true
+        }
+    }
+c5 extends c4 {
+    integer m0
+    f0(a0 : c1, a1 : integer, a2 : c2) -> c3 {
+        f0(f0(122, 240), 179, true, new c2 ( true )  * 44)
+        return 199
+        }
+    f1(a0 : c4) -> c1 {
+        while true {
+            f0(216)
+            }
+        
+        return true
+        }
+    }

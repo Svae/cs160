@@ -1,0 +1,78 @@
+c0 {
+    integer m0
+    integer m1
+    boolean m2
+    boolean m3
+    boolean m4
+    boolean m5
+    integer m6
+    boolean m7
+    integer m8
+    f0(a0 : integer, a1 : integer) -> integer {
+        print true
+        if 151 {
+            print -138
+            f0(148)
+            f0(false)
+            } else {
+        f0(false)
+        f0(217 / 204, 158)
+        }
+        
+        return 108 < 132
+        }
+    f1(a0 : boolean) -> integer {
+        print false
+        return 47
+        }
+    }
+c1 extends c0 {
+    boolean m0
+    c0 m1
+    c0 m2
+    c0 m3
+    f0(a0 : c0) -> c0 {
+        print 121
+        return false
+        }
+    f1(a0 : c0) -> c0 {
+        c0 l0, l1, l2
+        boolean l3, l4, l5, l6, l7, l8, l9
+        integer l10, l11, l12
+        boolean l13, l14
+        c0 l15
+        c0 l16, l17, l18, l19, l20, l21, l22, l23
+        c0 l24, l25, l26, l27, l28, l29, l30, l31
+        boolean l32, l33, l34
+        c0 l35, l36, l37, l38, l39, l40, l41
+        c0 l42, l43
+        while new c0 and new c0 ( true )  {
+            l37.f1(new c0 ( 19 ) )
+            l38.f0(l38.f1(new c0 ( 63 / 49 ) , false, new c0 ( false )  and new c0 ( new c0 ( new c0 ( l36.f0(false, true) ) , true )  ) ))
+            }
+        
+        return l2.f1(l20.m5)
+        }
+    }
+c2 extends c0 {
+    c1 m0
+    c1 m1
+    c0 m2
+    f0(a0 : c1) -> none {
+        c0 l0, l1, l2, l3, l4, l5
+        c0 l6, l7, l8, l9, l10, l11
+        c0 l12
+        c0 l13, l14, l15, l16, l17, l18, l19, l20, l21, l22, l23, l24
+        boolean l25
+        
+        }
+    f1(a0 : c0, a1 : c0, a2 : c1) -> c1 {
+        while 247 {
+            f1(false, f0(new c0, 208, new c0), new c1)
+            print f1(false, f1(new c0, 174))
+            }
+        
+        f1(new c1 ( 95, 255 ) )
+        return false
+        }
+    }

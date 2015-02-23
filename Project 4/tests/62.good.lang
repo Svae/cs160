@@ -1,0 +1,70 @@
+c0 {
+    f0(a0 : integer, a1 : integer) -> integer {
+        f0(false)
+        print f0(false) + f0(194)
+        return 167 / f0(f0(f0(105)))
+        }
+    }
+c1 {
+    f0(a0 : c0, a1 : c0) -> c0 {
+        print 46
+        return 92 <= true
+        }
+    }
+c2 {
+    c1 m0
+    c0 m1
+    c0 m2
+    c1 m3
+    f0(a0 : c0) -> c0 {
+        while new c0 < new c1 {
+            while 249 {
+                print true or new c0
+                print new c1 < 167
+                }
+            
+            while true {
+                print f0(false)
+                if true {
+                    print f0(false) or 3
+                    print 86
+                    f0(new c0)
+                    } else {
+                print 154
+                if false {
+                    f0(true, 3, false)
+                    f0(new c0 ( 204 equals 221 ) )
+                    print 15 < new c0 ( f0(true), true, f0(false), false ) 
+                    }
+                
+                print true
+                }
+                
+                f0(new c1)
+                }
+            
+            }
+        
+        f0(53, false)
+        print f0(true) < false
+        return new c0 ( 254, 114 ) 
+        }
+    f1(a0 : c0) -> c0 {
+        print 63
+        return f0(true)
+        }
+    }
+c3 extends c0 {
+    c0 m0
+    c2 m1
+    f0() -> c1 {
+        c1 l0
+        c2 l1, l2, l3, l4, l5, l6, l7, l8
+        c1 l9, l10, l11, l12
+        c1 l13, l14, l15, l16, l17
+        c2 l18, l19
+        l8.f0(l2.f0(new c1 ( l7.m3 ) ))
+        l13.f0(new c2 ( false ) )
+        return false + new c0 ( true ) 
+        }
+    }

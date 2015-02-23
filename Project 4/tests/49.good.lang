@@ -1,0 +1,33 @@
+c0 {
+    integer m0
+    boolean m1
+    boolean m2
+    boolean m3
+    f0(a0 : boolean) -> boolean {
+        f0(true)
+        return true and 152
+        }
+    }
+c1 {
+    c0 m0
+    c0 m1
+    f0(a0 : c0, a1 : c0, a2 : boolean, a3 : c0) -> none {
+        c0 l0, l1, l2, l3, l4, l5
+        
+        }
+    }
+c2 {
+    c1 m0
+    c0 m1
+    c1 m2
+    f0(a0 : integer) -> c1 {
+        c0 l0
+        c1 l1, l2, l3, l4, l5
+        c1 l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17
+        boolean l18, l19, l20, l21, l22
+        c0 l23, l24, l25
+        l15.f0(true, 84)
+        l9.f0(l15.f0(new c0 ( -false ) ) <= false)
+        return false
+        }
+    }

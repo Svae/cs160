@@ -1,0 +1,50 @@
+c0 {
+    integer m0
+    boolean m1
+    integer m2
+    f0(a0 : boolean) -> none {
+        print 5
+        if 166 {
+            print 108 if true
+            print 171 + f0(107, 217)
+            f0(214)
+            f0(f0(241, f0(false)))
+            } else {
+        f0(-150)
+        if 225 + 68 {
+            while 112 {
+                print 108 + 93
+                f0(213, 178)
+                print 48
+                while not f0(172) {
+                    f0(f0(f0(228)))
+                    f0(f0(79))
+                    }
+                
+                print 209
+                }
+            
+            print false
+            print 101
+            } else {
+        print true - 251
+        f0(210)
+        f0(23)
+        print 133
+        }
+        
+        print 34
+        }
+        
+        print 17
+        
+        }
+    f1(a0 : integer) -> boolean {
+        while 213 {
+            f0(176)
+            print 61
+            }
+        
+        return true
+        }
+    }

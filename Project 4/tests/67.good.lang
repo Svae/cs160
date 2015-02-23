@@ -1,0 +1,17 @@
+c0 {
+    boolean m0
+    boolean m1
+    f0(a0 : integer, a1 : integer) -> boolean {
+        integer l0, l1, l2, l3, l4, l5
+        while -173 {
+            print 57
+            while l2 {
+                l2 = 82
+                l0 = -l5
+                }
+            
+            }
+        
+        return 213
+        }
+    }

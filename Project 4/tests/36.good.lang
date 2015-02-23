@@ -1,0 +1,68 @@
+c0 {
+    integer m0
+    integer m1
+    boolean m2
+    boolean m3
+    integer m4
+    integer m5
+    boolean m6
+    f0(a0 : boolean) -> none {
+        integer l0
+        f0(true * true)
+        
+        }
+    }
+c1 {
+    c0 m0
+    c0 m1
+    f0() -> c0 {
+        boolean l0
+        if new c0 ( f0(new c0) )  {
+            if 70 {
+                f0(f0(true))
+                f0(new c0, false)
+                l0 = 83 or new c0
+                }
+            
+            print l0 - 161
+            f0(154, new c0)
+            }
+        
+        f0((f0(255)))
+        return f0(new c0)
+        }
+    f1(a0 : c0) -> c0 {
+        c0 l0, l1, l2, l3, l4
+        c0 l5, l6
+        c0 l7, l8
+        c0 l9
+        l2.f0(new c0 ( new c0 ) , l2.m3)
+        print new c0 ( new c0 )  and true
+        return new c0
+        }
+    }
+c2 extends c0 {
+    boolean m0
+    c0 m1
+    integer m2
+    f0(a0 : c0) -> c0 {
+        return 214
+        }
+    f1(a0 : c1) -> none {
+        print f0(new c1)
+        
+        }
+    f2(a0 : c0) -> c0 {
+        c1 l0, l1, l2, l3, l4, l5
+        boolean l6, l7
+        c0 l8, l9
+        l4.f0(false)
+        print l8.m4
+        l1.m1 = 237
+        return false <= 156
+        }
+    f3(a0 : c0) -> boolean {
+        print not new c1
+        return 234
+        }
+    }

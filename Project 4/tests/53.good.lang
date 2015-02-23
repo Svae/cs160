@@ -1,0 +1,35 @@
+c0 {
+    integer m0
+    boolean m1
+    boolean m2
+    integer m3
+    boolean m4
+    f0() -> none {
+        boolean l0, l1, l2, l3, l4, l5, l6, l7, l8, l9
+        integer l10
+        boolean l11, l12, l13
+        boolean l14, l15
+        boolean l16, l17, l18
+        integer l19, l20, l21, l22, l23, l24, l25
+        boolean l26
+        integer l27, l28
+        boolean l29, l30
+        integer l31
+        integer l32, l33, l34, l35, l36, l37, l38, l39
+        
+        }
+    f1(a0 : boolean) -> integer {
+        boolean l0, l1, l2, l3, l4, l5, l6
+        boolean l7
+        boolean l8, l9
+        integer l10, l11, l12, l13, l14, l15, l16, l17, l18, l19, l20, l21, l22, l23
+        l11 = 178
+        while (28) {
+            print 39
+            }
+        
+        l16 = 174 < l10
+        l0 = true
+        return 243 + 48
+        }
+    }

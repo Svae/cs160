@@ -1,0 +1,91 @@
+c0 {
+    boolean m0
+    integer m1
+    f0(a0 : boolean) -> boolean {
+        integer l0
+        boolean l1, l2
+        integer l3, l4, l5
+        boolean l6, l7, l8
+        boolean l9
+        return (56)
+        }
+    }
+c1 extends c0 {
+    c0 m0
+    c0 m1
+    c0 m2
+    c0 m3
+    c0 m4
+    f0() -> none {
+        c0 l0, l1, l2, l3, l4
+        integer l5
+        c0 l6, l7, l8, l9, l10
+        c0 l11, l12, l13, l14, l15
+        c0 l16, l17, l18
+        c0 l19, l20, l21, l22, l23, l24, l25, l26, l27
+        c0 l28, l29, l30, l31
+        if 180 {
+            while new c0 ( new c0 )  {
+                l19.f0(new c0, true)
+                }
+            
+            l11.m0 = true
+            l11.f0(true / false)
+            l18.m0 = 124
+            }
+        
+        
+        }
+    f1(a0 : c0) -> c0 {
+        c0 l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11
+        c0 l12, l13, l14
+        l1.m0 = 100
+        l9.f0(l6.m1)
+        return 140
+        }
+    }
+c2 extends c0 {
+    f0() -> c0 {
+        c1 l0, l1, l2
+        c0 l3, l4, l5, l6, l7, l8
+        integer l9, l10
+        c1 l11, l12, l13, l14, l15
+        l13.m1 = l5.m1 < true
+        l2.f1(l2.f0(125))
+        return l12.m2
+        }
+    }
+c3 extends c1 {
+    c2 m0
+    f0(a0 : c1) -> c0 {
+        c0 l0, l1, l2, l3, l4
+        f0(209)
+        l3.m1 = 186 equals true
+        while 40 {
+            l1.m1 = new c1
+            l2.m1 = new c2 - new c0
+            }
+        
+        f0(l3.m1)
+        return l1.f0(true)
+        }
+    }
+c4 extends c3 {
+    c0 m0
+    c1 m1
+    f0(a0 : c0) -> boolean {
+        c3 l0
+        c2 l1
+        c0 l2, l3, l4, l5, l6, l7, l8, l9, l10
+        boolean l11
+        c0 l12, l13, l14, l15, l16, l17, l18, l19, l20, l21, l22
+        c1 l23, l24, l25, l26, l27, l28, l29
+        c2 l30
+        c2 l31
+        boolean l32
+        c0 l33, l34, l35, l36
+        c0 l37, l38, l39, l40, l41, l42
+        l3.m1 = true
+        return new c1
+        }
+    }

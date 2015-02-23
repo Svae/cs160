@@ -1,0 +1,38 @@
+c0 {
+    boolean m0
+    boolean m1
+    integer m2
+    integer m3
+    }
+c1 {
+    c0 m0
+    integer m1
+    }
+c2 extends c1 {
+    f0(a0 : c1, a1 : c1, a2 : c1, a3 : c1) -> c0 {
+        boolean l0
+        integer l1, l2
+        c0 l3, l4, l5
+        c0 l6, l7, l8
+        c1 l9
+        f0(true - new c1 ( l2 ) )
+        f0(new c1 ( 10 ) , 83)
+        return 239
+        }
+    }
+c3 {
+    c0 m0
+    f0() -> c1 {
+        print true
+        print false
+        return f0(new c0 ( new c0 ( 91 )  ) ) < f0(new c1 ( false ) , f0(new c2 ( f0(new c1) ) ))
+        }
+    }
+c4 extends c1 {
+    c3 m0
+    integer m1
+    f0() -> none {
+        print new c0
+        
+        }
+    }

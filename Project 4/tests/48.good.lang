@@ -1,0 +1,81 @@
+c0 {
+    integer m0
+    boolean m1
+    boolean m2
+    f0(a0 : boolean) -> integer {
+        boolean l0, l1, l2, l3
+        boolean l4
+        while 230 {
+            l0 = -52
+            f0(l4)
+            }
+        
+        return 196
+        }
+    }
+c1 extends c0 {
+    f0(a0 : c0, a1 : c0, a2 : c0, a3 : boolean) -> c0 {
+        f0(158, new c0)
+        if -new c0 {
+            print 143
+            print f0(new c0 ( true, false, new c0 ( true, new c0 ( true )  )  ) , false) or true
+            while false * true {
+                if f0(new c0 ( f0(true, 4) ) ) {
+                    while f0(new c0, new c0 ( 167 ) ) < new c0 ( 213, false )  {
+                        while false <= 19 {
+                            f0(new c0, false * f0(229))
+                            f0(60)
+                            f0(new c0 ( new c0 ( f0(f0(new c0)) )  ) )
+                            print (true)
+                            }
+                        
+                        print f0(new c0 ( new c0 ) )
+                        print f0(f0(new c0 ( 26 ) )) / 63
+                        }
+                    
+                    print false - 193
+                    print false
+                    f0(false, true)
+                    }
+                
+                f0(44, new c0 ( 240, 151 ) )
+                while 133 {
+                    print false
+                    f0(f0(new c0, true, f0(true), 50 < false))
+                    if new c0 ( true )  + 99 {
+                        f0(new c0 / 180)
+                        f0(f0(new c0, 205, f0(65)))
+                        while f0(new c0 ( f0(new c0) ) ) {
+                            while false {
+                                print new c0 ( 154 ) 
+                                }
+                            
+                            print new c0
+                            }
+                        
+                        f0(76)
+                        } else {
+                    print false
+                    print new c0 ( false < 120 )  <= false
+                    f0(163)
+                    print 147 <= f0(true)
+                    print f0(new c0 ( f0(true, f0(true)), 154 ) , 203)
+                    }
+                    
+                    }
+                
+                while new c0 {
+                    print f0(true)
+                    f0(238)
+                    f0(new c0 ( new c0 )  + new c0 ( f0(true) ) , new c0)
+                    }
+                
+                }
+            
+            print 43
+            }
+        
+        print f0(154)
+        return true
+        }
+    }

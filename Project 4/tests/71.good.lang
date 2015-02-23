@@ -1,0 +1,52 @@
+c0 {
+    integer m0
+    f0(a0 : boolean) -> integer {
+        print f0(false, false)
+        f0(false)
+        return f0(f0(205))
+        }
+    }
+c1 {
+    boolean m0
+    c0 m1
+    c0 m2
+    c0 m3
+    c0 m4
+    f0() -> c0 {
+        c0 l0, l1, l2
+        c0 l3, l4
+        c0 l5, l6, l7
+        c0 l8, l9
+        l2.m0 = -new c0 ( new c0 ( l7.f0(false) )  ) 
+        f0(255, true * 221)
+        return 184
+        }
+    f1(a0 : c0, a1 : integer) -> boolean {
+        print new c0 ( false ) 
+        f0(17)
+        return f0(203)
+        }
+    f2(a0 : c0, a1 : c0, a2 : c0, a3 : boolean, a4 : c0, a5 : c0, a6 : integer) -> c0 {
+        c0 l0, l1
+        c0 l2, l3, l4
+        boolean l5, l6
+        return l3.f0(new c0 ( 78, new c0 ) )
+        }
+    }
+c2 extends c0 {
+    c1 m0
+    f0() -> c1 {
+        c1 l0, l1, l2
+        c1 l3, l4, l5
+        l0.f0(l1.f0(197))
+        return new c0 ( l4.f0(l2.f2(l1.m4), new c1 ( new c1 ) ) ) 
+        }
+    }
+c3 extends c2 {
+    c2 m0
+    c2 m1
+    f0() -> c1 {
+        integer l0
+        return l0 + 143
+        }
+    }

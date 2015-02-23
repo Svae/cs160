@@ -1,0 +1,24 @@
+c0 {
+    f0() -> boolean {
+        while 138 {
+            f0(false)
+            print 14
+            }
+        
+        f0(f0(true))
+        print 245
+        return 194
+        }
+    f1(a0 : boolean, a1 : integer, a2 : boolean, a3 : boolean) -> integer {
+        integer l0, l1, l2, l3, l4, l5, l6, l7
+        f1(f1(8))
+        f1(false)
+        return 45
+        }
+    f2(a0 : boolean, a1 : boolean) -> none {
+        boolean l0, l1
+        l0 = not f0(f0(not f0(false)), 173)
+        f1(f0(f2(80, false, 15)))
+        
+        }
+    }

@@ -1,0 +1,10 @@
+c0 {
+    f0(a0 : boolean, a1 : boolean, a2 : boolean) -> boolean {
+        print 225 equals true
+        return 248
+        }
+    }
+c1 extends c0 {
+    c0 m0
+    c0 m1
+    }

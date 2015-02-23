@@ -1,0 +1,31 @@
+c0 {
+    boolean m0
+    f0(a0 : boolean, a1 : boolean) -> none {
+        boolean l0, l1, l2
+        integer l3, l4, l5
+        f0(131)
+        
+        }
+    f1(a0 : integer, a1 : boolean) -> boolean {
+        while true < false {
+            if false {
+                print 63
+                print f0(true)
+                } else {
+            print 91 - 82
+            f1(1, 109)
+            f0(false)
+            }
+            
+            print false equals 101
+            }
+        
+        f1(151 < f1(123, true))
+        while 245 {
+            print false
+            print 33
+            }
+        
+        return 151
+        }
+    }

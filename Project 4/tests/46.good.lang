@@ -1,0 +1,57 @@
+c0 {
+    boolean m0
+    boolean m1
+    boolean m2
+    boolean m3
+    boolean m4
+    boolean m5
+    boolean m6
+    f0(a0 : boolean, a1 : integer) -> integer {
+        integer l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11
+        boolean l12
+        f0(205)
+        if 39 equals l3 {
+            if f0(41) {
+                f0(16 or -false, 195)
+                l8 = not true
+                l10 = l10
+                f0(62)
+                }
+            
+            l10 = false
+            f0(f0(214, true, false < true))
+            f0(false, 111)
+            }
+        
+        l1 = f0(f0(f0(f0(true))))
+        return false
+        }
+    }
+c1 {
+    c0 m0
+    boolean m1
+    f0(a0 : c0, a1 : boolean) -> c0 {
+        print true
+        print new c0 ( 93 ) 
+        return false
+        }
+    }
+c2 {
+    c0 m0
+    c0 m1
+    c0 m2
+    }
+c3 extends c2 {
+    c0 m0
+    c0 m1
+    f0(a0 : c0, a1 : c0) -> c1 {
+        boolean l0, l1
+        c1 l2, l3, l4, l5
+        c0 l6, l7, l8, l9, l10, l11, l12, l13
+        c0 l14, l15, l16, l17
+        c0 l18
+        l4.f0(l4.m0, true)
+        l15.f0(new c0 ( new c1 ) )
+        return true and new c0
+        }
+    }

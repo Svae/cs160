@@ -1,0 +1,27 @@
+c0 {
+    integer m0
+    integer m1
+    integer m2
+    integer m3
+    boolean m4
+    integer m5
+    boolean m6
+    integer m7
+    integer m8
+    boolean m9
+    boolean m10
+    integer m11
+    boolean m12
+    boolean m13
+    boolean m14
+    boolean m15
+    boolean m16
+    integer m17
+    integer m18
+    f0(a0 : integer) -> boolean {
+        boolean l0, l1
+        integer l2
+        l1 = f0(105, 31) --! This function appears to exhibit infinite recursion.
+        return 84
+        }
+    }

@@ -1,0 +1,6 @@
+c0 {
+    f0() -> boolean {
+        f0(179)
+        return 230 < true
+        }
+    }

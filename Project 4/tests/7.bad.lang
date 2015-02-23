@@ -1,0 +1,61 @@
+c0 {
+    f0(a0 : integer, a1 : integer) -> boolean {
+        while 150 {
+            f0(194)
+            f0(true)
+            print 151
+            }
+        
+        f0(220, 60)
+        return 32 <= false
+        } --! !@#$%^*&*&! --! !!!!!!--
+    }
+c1 {
+    c0 m0
+    c0 m1
+    c0 m2
+    }
+c2 {
+    f0(a0 : c1) -> c1 {
+        c0 l0, l1
+        c0 l2, l3
+        boolean l4
+        return new c1 ( (114) )  * new c0
+        }
+    }
+c3 extends c2 {
+    c0 m0
+    c2 m1
+    f0(a0 : c0, a1 : integer, --! use var a2 !-- : c1, a3 : integer, a4 : c2) -> boolean {
+        print new c2 ( false equals new c2 ) 
+        while new c0 * f0(f0(f0(new c0 ( 28, new c2 ( 77 )  ) )), true, new c0 ( new c2 ) ) {
+            print false equals true
+            f0(false, 182)
+            }
+        
+        return false <= false
+        }
+    f1(a0 : c2) -> c1 {
+        c0 l0, l1, l2
+        boolean l3, l4, l5, l6, l7, l8, l9
+        c2 l10, l11, l12, l13, l14, l15, l16
+        l16 f0(21)
+        return new c1 ( new c0 ( false )  ) 
+        }
+    }
+c4 extends c2 {
+    f0(a0 : integer) -> boolean {
+        print false
+        print 69 equals false
+        print new c2 ( true ) 
+        return true * true
+        }
+    }
+c5 {
+    c4 m0
+    f0(a0 : c3, a1 : integer, a2 : integer) -> c4 {
+        boolean l0, l1, l2, l3, l4
+        f0(new c0 ( new c4 ) )
+        return 142
+        }
+    }

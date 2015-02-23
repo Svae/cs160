@@ -1,0 +1,20 @@
+c0 {
+    integer m0
+    boolean m1
+    boolean m2
+    integer m3
+    f0(a0 : boolean, a1 : integer) -> none {
+        f0(true or 82)
+        f0(true <= 132)
+        
+        }
+    f1(a0 : boolean, a1 : integer) -> boolean {
+        integer l0
+        while f0(f1(193)) {
+            l0 = f1(133) < false
+            l0 = f1(l0) / 235
+            }
+        
+        return false
+        }
+    }

@@ -1,0 +1,53 @@
+c0 {
+    f0(a0 : integer) -> boolean {
+        print true
+        return false
+        }
+    }
+c1 {
+    c0 m0
+    f0() -> none {
+        f0(false)
+        
+        }
+    }
+c2 extends c1 {
+    f0(a0 : boolean, a1 : c1) -> none {
+        boolean l0
+        boolean l1
+        boolean l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13
+        f0(-l12)
+        l8 = new c0 * not new c1 ( 153 )  equals l7
+        
+        }
+    }
+c3 extends c2 {
+    integer m0
+    c0 m1
+    c1 m2
+    c2 m3
+    integer m4
+    c2 m5
+    c0 m6
+    f0(a0 : c2, a1 : c2, a2 : c1) -> boolean {
+        c2 l0
+        l0.m0 = new c2 ( new c1 ( new c0 ( false )  )  ) 
+        return new c1 ( true, f0(l0.f0(true)) )  or 39
+        }
+    f1(a0 : c2, a1 : c2, a2 : c1, a3 : c2) -> integer {
+        c2 l0
+        c1 l1, l2, l3
+        c2 l4
+        return not true
+        }
+    }
+c4 {
+    c0 m0
+    c1 m1
+    f0(a0 : c2) -> c0 {
+        c3 l0, l1
+        c3 l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15
+        l1.m0 = 227
+        return 156
+        }
+    }

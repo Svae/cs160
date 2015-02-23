@@ -1,0 +1,29 @@
+c0 {
+    integer m0
+    boolean m1
+    integer m2
+    f0() -> boolean {
+        print false
+        print 33
+        return 196 and f0(f0(false, 155))
+        }
+    }
+c1 {
+    integer m0
+    c0 m1
+    c0 m2
+    boolean m3
+    c0 m4
+    c0 m5
+    c0 m6
+    c0 m7
+    c0 m8
+    c0 m9
+    c0 m10
+    boolean m11
+    f0(a0 : c0, a1 : boolean) -> c0 {
+        c0 l0, l1, l2
+        print new c0
+        return new c0
+        }
+    }

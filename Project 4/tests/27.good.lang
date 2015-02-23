@@ -1,0 +1,25 @@
+c0 {
+    }
+c1 extends c0 {
+    f0(a0 : c0, a1 : c0, a2 : boolean) -> c0 {
+        while 46 {
+            f0(41)
+            if true {
+                while false {
+                    f0(true)
+                    print 40
+                    }
+                
+                print new c0 ( 158 )  equals 48
+                } else {
+            f0(new c0 ( new c0 ( 255 )  ) )
+            f0(false)
+            f0(57)
+            }
+            
+            print 194
+            }
+        
+        return new c0
+        }
+    }

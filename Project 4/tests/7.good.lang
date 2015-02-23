@@ -1,0 +1,97 @@
+c0 {
+    integer m0
+    integer m1
+    f0(a0 : integer, a1 : boolean, a2 : integer, a3 : integer) -> integer {
+        integer l0, l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15
+        boolean l16, l17, l18, l19
+        l18 = f0(2 equals f0(23))
+        print 31
+        return 79
+        }
+    f1() -> none {
+        boolean l0
+        integer l1
+        l1 = true
+        l1 = true < true
+        l0 = f1(f1(f0(176, f1(165, true, true, false), f1(169)), f1(false, false - f0(true))) and l1, 232) <= 253
+        
+        }
+    }
+c1 extends c0 {
+    f0(a0 : c0, a1 : c0, a2 : c0, a3 : c0) -> none {
+        c0 l0, l1
+        c0 l2
+        if false {
+            l0.m0 = true
+            f0(119)
+            }
+        
+        print (new c0)
+        
+        }
+    f1(a0 : c0, a1 : integer, a2 : c0, a3 : c0, a4 : c0) -> integer {
+        c0 l0, l1
+        c0 l2, l3, l4, l5, l6, l7, l8, l9
+        c0 l10, l11, l12, l13
+        l2.m0 = 154
+        l12.m1 = (l0.m0)
+        return l4.m1
+        }
+    f2() -> c0 {
+        c0 l0, l1
+        l0.m0 = new c0 ( false ) 
+        l1.m0 = l1.m1 * false
+        return new c0 ( l0.m1 ) 
+        }
+    }
+c2 {
+    c1 m0
+    c0 m1
+    c0 m2
+    boolean m3
+    c0 m4
+    f0(a0 : c0) -> none {
+        c0 l0, l1, l2, l3
+        integer l4
+        if 228 {
+            if new c1 {
+                l0.m0 = 7
+                l4 = l0.f1(true, true)
+                }
+            
+            l0.f1(true)
+            }
+        
+        while new c1 * false {
+            if -l4 {
+                l3.m0 = false
+                l1.m1 = 240
+                l1.m1 = l1.f0(false) - false
+                } else {
+            print not 142
+            l0.f1(l1.f0(l2.f1(l2.f0(true))))
+            l3.f1(new c1)
+            }
+            
+            l0.m0 = new c1 ( l3.f0(76) ) 
+            l4 = l1.f0(l0.f0(186)) equals l1.f1(false)
+            }
+        
+        while true {
+            print new c0
+            l0.f1(new c1 ( 89 ) )
+            }
+        
+        l2.f1(new c1 ( true ) )
+        
+        }
+    f1() -> c0 {
+        c1 l0
+        f0(l0.m1)
+        l0.f1(false)
+        return 80 - new c0 ( true ) 
+        }
+    f2() -> c0 {
+        return 181
+        }
+    }

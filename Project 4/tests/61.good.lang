@@ -1,0 +1,8 @@
+c0 {
+    boolean m0
+    f0(a0 : boolean) -> boolean {
+        integer l0, l1, l2, l3
+        f0(94)
+        return 42
+        }
+    }

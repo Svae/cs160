@@ -1,0 +1,65 @@
+c0 {
+    integer m0
+    f0() -> integer {
+        print 146
+        return false
+        }
+    f1(a0 : boolean) -> integer {
+        boolean l0, l1, l2, l3, l4, l5
+        f1(l4)
+        l0 = true
+        l3 = 140
+        return (true)
+        }
+    f2() -> boolean {
+        boolean l0, l1, l2
+        integer l3, l4
+        boolean l5, l6, l7, l8
+        boolean l9, l10, l11, l12, l13, l14
+        boolean l15, l16, l17
+        return f1(true)
+        }
+    }
+c1 extends c0 {
+    f0(a0 : integer, a1 : integer, a2 : c0) -> c0 {
+        boolean l0
+        while new c0 {
+            l0 = f1(l0 + l0)
+            l0 = 118
+            l0 = new c0 ( true ) 
+            }
+        
+        l0 = new c0
+        return 114
+        }
+    f1(a0 : c0) -> none {
+        print new c0 ( 117 ) 
+        f1(6)
+        
+        }
+    }
+c2 extends c0 {
+    boolean m0
+    c1 m1
+    c1 m2
+    c1 m3
+    integer m4
+    c0 m5
+    }
+c3 extends c1 {
+    c0 m0
+    c1 m1
+    f0(a0 : c2, a1 : c1, a2 : integer, a3 : c0) -> none {
+        c2 l0, l1, l2, l3
+        f1(new c1)
+        l2.m5 = -false
+        
+        }
+    f1(a0 : c1, a1 : boolean, a2 : c2) -> c2 {
+        boolean l0
+        c1 l1, l2
+        l1.m0 = f0(new c0, 125)
+        print new c0 ( 72 ) 
+        return (l2.f1(54))
+        }
+    }

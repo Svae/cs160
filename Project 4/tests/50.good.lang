@@ -1,0 +1,43 @@
+c0 {
+    integer m0
+    boolean m1
+    boolean m2
+    boolean m3
+    boolean m4
+    boolean m5
+    boolean m6
+    integer m7
+    integer m8
+    f0(a0 : integer, a1 : boolean, a2 : boolean) -> boolean {
+        print 108
+        f0(f0(73) <= 50, false, false, false, 192)
+        return false - false
+        }
+    f1(a0 : integer) -> integer {
+        integer l0
+        f0(247)
+        return f0(f0(f0(l0, f0(20), f0(true)), f1(true + 6), true))
+        }
+    }
+c1 extends c0 {
+    c0 m0
+    f0(a0 : c0) -> integer {
+        c0 l0, l1
+        c0 l2, l3, l4, l5, l6, l7, l8, l9
+        c0 l10, l11, l12
+        c0 l13, l14, l15
+        c0 l16, l17, l18
+        l16.m6 = new c0
+        return l6.f1(new c0)
+        }
+    }
+c2 {
+    c0 m0
+    f0(a0 : c0, a1 : c0) -> c0 {
+        boolean l0, l1
+        c0 l2
+        c1 l3, l4, l5, l6, l7
+        l3.f0(new c0)
+        return new c1 + false
+        }
+    }

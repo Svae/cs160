@@ -1,0 +1,33 @@
+c0 {
+    integer m0
+    boolean m1
+    boolean m2
+    f0(a0 : boolean, a1 : boolean, a2 : integer) -> integer {
+        integer l0, l1, l2, l3
+        integer l4, l5, l6, l7, l8, l9
+        l6 = l6
+        return 16 / f0(62 + l5, 224)
+        }
+    f1(a0 : boolean) -> none {
+        boolean l0
+        boolean l1
+        integer l2
+        l2 = f0(124) * 192
+        while 5 {
+            f0(true)
+            }
+        
+        
+        }
+    }
+c1 extends c0 {
+    f0(a0 : c0) -> none {
+        c0 l0
+        c0 l1
+        integer l2, l3, l4, l5, l6, l7, l8
+        c0 l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19
+        c0 l20, l21, l22, l23
+        l1.f0(false)
+        
+        }
+    }

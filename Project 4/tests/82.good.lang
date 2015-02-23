@@ -1,0 +1,14 @@
+c0 {
+    f0(a0 : boolean, a1 : integer, a2 : integer, a3 : integer) -> integer {
+        boolean l0, l1, l2
+        boolean l3, l4, l5, l6
+        f0(true)
+        while 122 {
+            f0(32)
+            print (l4)
+            l0 = f0(170, 71) and f0(false)
+            }
+        
+        return true
+        }
+    }

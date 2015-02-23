@@ -1,0 +1,70 @@
+c0 {
+    boolean m0
+    f0(a0 : integer) -> integer {
+        f0(106)
+        return true + true
+        }
+    }
+c1 {
+    c0 m0
+    boolean m1
+    c0 m2
+    c0 m3
+    integer m4
+    boolean m5
+    c0 m6
+    c0 m7
+    f0(a0 : c0, a1 : c0, a2 : c0) -> boolean {
+        integer l0
+        c0 l1, l2, l3
+        c0 l4, l5
+        c0 l6
+        c0 l7, l8, l9, l10, l11, l12
+        while l8.f0(147 and 98, true) {
+            l9.m0 = true - false
+            l7.m0 = true
+            }
+        
+        print l7.f0(new c0)
+        return l5.f0(true) or 94
+        }
+    f1(a0 : c0) -> c0 {
+        c0 l0, l1, l2, l3, l4
+        l2.f0(new c0 ( 162 ) )
+        return not 231
+        }
+    }
+c2 {
+    c1 m0
+    c1 m1
+    c1 m2
+    c0 m3
+    integer m4
+    c1 m5
+    c0 m6
+    c0 m7
+    boolean m8
+    c0 m9
+    f0(a0 : c1) -> none {
+        if f0(true, false, new c1 ( f0(f0(new c0 ( false ) )) ) , new c1 ( 195 ) , f0(90)) {
+            if false {
+                while f0(new c0) + 153 {
+                    print f0(89)
+                    f0(new c1 ( 75, new c0 ) , 225)
+                    }
+                
+                f0(true, true)
+                print new c0 ( false ) 
+                }
+            
+            f0(72)
+            print 61
+            while 107 < f0(152 + false) {
+                print f0(true)
+                }
+            
+            }
+        
+        
+        }
+    }

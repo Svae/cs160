@@ -1,0 +1,23 @@
+c0 {
+    integer m0
+    boolean m1
+    f0() -> boolean {
+        return f0(true) and 88
+        }
+    f1(a0 : boolean, a1 : integer) -> integer {
+        f1(78)
+        return false
+        }
+    }
+c1 extends c0 {
+    c0 m0
+    }
+c2 extends c1 {
+    f0(a0 : c0) -> boolean {
+        f1(228)
+        print new c0 ( new c1, false ) 
+        f0((new c1 ( true ) ), true)
+        f0(152)
+        return 18
+        }
+    }
