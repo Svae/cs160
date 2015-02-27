@@ -13,7 +13,6 @@ int main(void) {
     astRoot = NULL;
     
     yyparse();
-    
     if (astRoot) {
         TypeCheck* typecheck = new TypeCheck();
         astRoot->accept(typecheck);

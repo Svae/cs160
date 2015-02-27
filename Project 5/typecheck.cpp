@@ -70,24 +70,64 @@ void TypeCheck::visitProgramNode(ProgramNode* node) {
     for(std::list<ClassNode*>::iterator it = node->class_list->begin(); it !=node->class_list->end(); it++){
         visitClassNode(*it);
     }
-
-
   // WRITEME: Replace with code if necessary
 }
 
+
+/*typedef struct classinfo {
+ std::string superClassName;
+ MethodTable *methods;
+ VariableTable *members;
+ int membersSize;
+ } ClassInfo;*/
+
 void TypeCheck::visitClassNode(ClassNode* node){
+    
     ClassInfo classinfo;
+
     currentMethodTable = new MethodTable();
+
+    currentMemberOffset = 0;
+    currentLocalOffset = 0;
+
     currentClassName = node->identifier_1->name;
-    classinfo.superClassName = node -> identifier_2 -> name;
-    for(std::list<MethodNode*>::iterator it = node->method_list->begin(); it !=node->method_list->end(); it++){
-        visitMethodNode(*it);
+
+    if (node->identifier_2 != NULL) {
+        if (classTable->count(node -> identifier_2 -> name) == 0 ){
+            typeError(undefined_class);
+        }
+        classinfo.superClassName = node -> identifier_2 -> name;
+    } else {
+        
+        classinfo.superClassName ="";
     }
+    
+    currentVariableTable = new VariableTable();
+    
     for(std::list<DeclarationNode*>::iterator it = node->declaration_list->begin(); it !=node->declaration_list->end(); it++){
         visitDeclarationNode(*it);
     }
+    classinfo.members = currentVariableTable;
+    classinfo.membersSize = currentVariableTable->size()*4;
+    if (currentClassName == "Main" && currentVariableTable->size() > 0)
+        typeError(main_class_members_present);
     
     classTable->insert(std::pair<std::string, ClassInfo>(currentClassName,classinfo));
+
+    for(std::list<MethodNode*>::iterator it = node->method_list->begin(); it !=node->method_list->end(); it++){
+        visitMethodNode(*it);
+    }
+
+    classinfo.methods = currentMethodTable;
+    
+    
+    if (currentClassName == "Main" && currentMethodTable->count("main") == 0)
+        typeError(no_main_method);
+    
+    std::map<std::string,ClassInfo>::iterator it;
+    it = classTable->find(currentClassName);
+    it->second.methods = currentMethodTable;
+    
     // WRITEME: Replace with code if necessary
     // classTable
 }
@@ -114,15 +154,66 @@ typedef struct compoundtype {
 
 void TypeCheck::visitMethodNode(MethodNode* node) {    
     MethodInfo methodinfo;
-    //methodinfo.returnType = node -> type;
+    methodinfo.parameters = new std::list<CompoundType>();
+    CompoundType compoundtype;
+    currentVariableTable = new VariableTable();
+    
+    currentLocalOffset = -4;
+    currentParameterOffset = 12;
+    
+    node->type->accept(this);
+    compoundtype.baseType = node->type->basetype;
+    compoundtype.objectClassName = node->type->objectClassName;
+    methodinfo.returnType = compoundtype;
+    
     for(std::list<ParameterNode*>::iterator it = node->parameter_list->begin(); it !=node->parameter_list->end(); it++){
-        visitParameterNode(*it);
+
+        (*it)->type->accept(this);
+        CompoundType compoundtype;
+        compoundtype.baseType = (*it)->type->basetype;
+        compoundtype.objectClassName = (*it) -> type->objectClassName;
+        methodinfo.parameters->push_back(compoundtype);
+        
+        VariableInfo variableinfo;
+        variableinfo.type = compoundtype;
+        variableinfo.offset = currentParameterOffset;
+        variableinfo.size = 4;
+        currentParameterOffset += 4;
+        
+        currentVariableTable -> insert(std::pair<std::string,VariableInfo>((*it)->identifier->name,variableinfo));
+
     }
+    
     visitMethodBodyNode(node->methodbody);
+    
+    methodinfo.variables = currentVariableTable;
+    methodinfo.localsSize = currentLocalOffset * (-1) - 4;
+    if (currentClassName == node->identifier->name && node->type->basetype != bt_none)
+        typeError(constructor_returns_type);
+    
+
+    if (node->type->basetype == bt_none && node->methodbody->returnstatement != NULL) {
+        typeError(return_type_mismatch);
+    }
+    
+    if (node->type->basetype != bt_none && node->methodbody->basetype != node->type->basetype) {
+        typeError(return_type_mismatch);
+    }
+    
+    if (node->type->basetype == bt_object && node->methodbody->basetype == bt_object) {
+        if (node->methodbody->objectClassName != node->type->objectClassName) {
+            typeError(return_type_mismatch);
+        }
+    }
+    if (currentClassName == "Main" && node->identifier->name == "main") {
+        if (methodinfo.parameters->size()>0) {
+            typeError(main_method_incorrect_signature);
+        }
+    }
+    
     
     currentMethodTable -> insert(std::pair<std::string, MethodInfo>(node->identifier->name,methodinfo));
     //currentMethodTable[node->identifier->name] = methodinfo;
-    // methodTable
   // WRITEME: Replace with code if necessary
 }
 
@@ -131,10 +222,32 @@ void TypeCheck::visitMethodNode(MethodNode* node) {
  std::list<StatementNode*>* statement_list;
  ReturnStatementNode* returnstatement;
 */
+
+/* typedef struct variableinfo {
+ CompoundType type;
+ int offset;
+ int size;
+ } VariableInfo;*/
+
+// typedef std::map<std::string, VariableInfo> VariableTable;
+
 void TypeCheck::visitMethodBodyNode(MethodBodyNode* node) {
+    
     for(std::list<DeclarationNode*>::iterator it = node->declaration_list->begin(); it !=node->declaration_list->end(); it++){
         visitDeclarationNode(*it);
     }
+    
+    for(std::list<StatementNode*>::iterator it = node->statement_list->begin(); it !=node->statement_list->end(); it++){
+        (*it)->accept(this);
+    }
+    
+    
+    if (node->returnstatement != NULL) {
+        node->returnstatement->accept(this);
+        node->basetype = node->returnstatement->basetype;
+    }
+
+    
     
   // WRITEME: Replace with code if necessary
 }
@@ -142,22 +255,69 @@ void TypeCheck::visitMethodBodyNode(MethodBodyNode* node) {
 /*TypeNode* type;
  IdentifierNode* identifier;*/
 void TypeCheck::visitParameterNode(ParameterNode* node) {
+    
   // WRITEME: Replace with code if necessary
 }
 
 /* TypeNode* type;
  std::list<IdentifierNode*>* identifier_list;
 */
+
+/* typedef struct variableinfo {
+ CompoundType type;
+ int offset;
+ int size;
+ } VariableInfo; */
 void TypeCheck::visitDeclarationNode(DeclarationNode* node) {
+    CompoundType compoundtype;
+    node->type->accept(this);
+    compoundtype.baseType = node -> type->basetype;
+    
+    if (node -> type->objectClassName != "") {
+        if (classTable->count(node -> type->objectClassName) == 0 ) {
+            typeError(undefined_class);
+        }
+        compoundtype.objectClassName = node -> type->objectClassName;
+
+    }
+    
+    for(std::list<IdentifierNode*>::iterator it = node->identifier_list->begin(); it !=node->identifier_list->end(); it++){
+        VariableInfo variableinfo;
+        variableinfo.type = compoundtype;
+        variableinfo.size = 4;
+        (*it)->basetype = node -> type->basetype;
+        if (currentLocalOffset == 0) {
+            variableinfo.offset = currentMemberOffset;
+            currentMemberOffset += 4;
+        } else {
+            variableinfo.offset = currentLocalOffset;
+            currentLocalOffset -= 4;
+        }
+        currentVariableTable -> insert(std::pair<std::string, VariableInfo>((*it)->name,variableinfo));
+    }
+    
     // currentMemberTable[string] = variableInfo
   // WRITEME: Replace with code if necessary
 }
 //ExpressionNode* expression;
 void TypeCheck::visitReturnStatementNode(ReturnStatementNode* node) {
+    
+    node->expression->accept(this);
+    node->basetype = node->expression->basetype;
+
+
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitAssignmentNode(AssignmentNode* node) {
+    node->expression->accept(this);
+    int c1 = currentVariableTable ->
+    if (node->identifier_2 == NULL) {
+        
+    }
+    
+    
+    
   // WRITEME: Replace with code if necessary
 }
 
@@ -166,58 +326,138 @@ void TypeCheck::visitCallNode(CallNode* node) {
 }
 
 void TypeCheck::visitIfElseNode(IfElseNode* node) {
+    node->visit_children(this);
+    if (node->expression->basetype != bt_boolean) {
+        typeError(if_predicate_type_mismatch);
+    }
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitWhileNode(WhileNode* node) {
-  // WRITEME: Replace with code if necessary
+    node->visit_children(this);
+    if (node->expression->basetype != bt_boolean) {
+        typeError(if_predicate_type_mismatch);
+    }
 }
 
 void TypeCheck::visitPrintNode(PrintNode* node) {
+    
   // WRITEME: Replace with code if necessary
 }
 
+//Plus, Minus, Times, Divide, Negation all expect integer operands (two or one) and produce an integer.
+//expression_type_mismatch
+
 void TypeCheck::visitPlusNode(PlusNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_integer || node->expression_2->basetype != bt_integer) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_integer;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitMinusNode(MinusNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_integer || node->expression_2->basetype != bt_integer) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_integer;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitTimesNode(TimesNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_integer || node->expression_2->basetype != bt_integer) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_integer;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitDivideNode(DivideNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_integer || node->expression_2->basetype != bt_integer) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_integer;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitLessNode(LessNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_integer || node->expression_2->basetype != bt_integer) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_boolean;
+
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitLessEqualNode(LessEqualNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_integer || node->expression_2->basetype != bt_integer) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_boolean;
+
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitEqualNode(EqualNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != node->expression_2->basetype) {
+        typeError(expression_type_mismatch);
+    }
+    if (node->expression_1->basetype != bt_integer || node->expression_1->basetype != bt_boolean) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_boolean;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitAndNode(AndNode* node) {
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_boolean || node->expression_2->basetype != bt_boolean) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_boolean;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitOrNode(OrNode* node) {
   // WRITEME: Replace with code if necessary
+    node->expression_1->accept(this);
+    node->expression_2->accept(this);
+    if (node->expression_1->basetype != bt_boolean || node->expression_2->basetype != bt_boolean) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_boolean;
 }
 
 void TypeCheck::visitNotNode(NotNode* node) {
+    node->expression->accept(this);
+    if (node->expression->basetype != bt_boolean) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_boolean;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitNegationNode(NegationNode* node) {
+    node->expression->accept(this);
+    if (node->expression->basetype != bt_integer) {
+        typeError(expression_type_mismatch);
+    }
+    node->basetype = bt_integer;
   // WRITEME: Replace with code if necessary
 }
 
@@ -234,11 +474,15 @@ void TypeCheck::visitVariableNode(VariableNode* node) {
 }
 
 void TypeCheck::visitIntegerLiteralNode(IntegerLiteralNode* node) {
+    node->basetype = bt_integer;
+    node->objectClassName = "";
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitBooleanLiteralNode(BooleanLiteralNode* node) {
-  // WRITEME: Replace with code if necessary
+    node->basetype = bt_boolean;
+    node->objectClassName = "";
+    // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitNewNode(NewNode* node) {
@@ -246,26 +490,37 @@ void TypeCheck::visitNewNode(NewNode* node) {
 }
 
 void TypeCheck::visitIntegerTypeNode(IntegerTypeNode* node) {
+    node->basetype = bt_integer;
+    node->objectClassName = "";
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitBooleanTypeNode(BooleanTypeNode* node) {
+    node->basetype = bt_boolean;
+    node->objectClassName = "";
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitObjectTypeNode(ObjectTypeNode* node) {
+    node->basetype = bt_object;
+    node->objectClassName = node->identifier->name;
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitNoneNode(NoneNode* node) {
-  // WRITEME: Replace with code if necessary
+    node->basetype = bt_none;
+    node->objectClassName = "";
+
+    // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitIdentifierNode(IdentifierNode* node) {
+    
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitIntegerNode(IntegerNode* node) {
+    
   // WRITEME: Replace with code if necessary
 }
 
