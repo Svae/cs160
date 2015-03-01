@@ -82,6 +82,7 @@ void TypeCheck::visitProgramNode(ProgramNode* node) {
  } ClassInfo;*/
 
 void TypeCheck::visitClassNode(ClassNode* node){
+    std::cout<<node->identifier_1->name << std::endl;
     
     ClassInfo classinfo;
 
@@ -152,7 +153,8 @@ typedef struct compoundtype {
  TypeNode* type;
  MethodBodyNode* methodbody;*/
 
-void TypeCheck::visitMethodNode(MethodNode* node) {    
+void TypeCheck::visitMethodNode(MethodNode* node) {
+    std::cout << node->identifier->name<<std::endl;
     MethodInfo methodinfo;
     methodinfo.parameters = new std::list<CompoundType>();
     CompoundType compoundtype;
@@ -245,6 +247,7 @@ void TypeCheck::visitMethodBodyNode(MethodBodyNode* node) {
     if (node->returnstatement != NULL) {
         node->returnstatement->accept(this);
         node->basetype = node->returnstatement->basetype;
+        node->objectClassName = node->returnstatement->objectClassName;
     }
 
     
@@ -259,15 +262,7 @@ void TypeCheck::visitParameterNode(ParameterNode* node) {
   // WRITEME: Replace with code if necessary
 }
 
-/* TypeNode* type;
- std::list<IdentifierNode*>* identifier_list;
-*/
 
-/* typedef struct variableinfo {
- CompoundType type;
- int offset;
- int size;
- } VariableInfo; */
 void TypeCheck::visitDeclarationNode(DeclarationNode* node) {
     CompoundType compoundtype;
     node->type->accept(this);
@@ -304,19 +299,81 @@ void TypeCheck::visitReturnStatementNode(ReturnStatementNode* node) {
     
     node->expression->accept(this);
     node->basetype = node->expression->basetype;
+    node->objectClassName = node->expression ->objectClassName;
 
 
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitAssignmentNode(AssignmentNode* node) {
+//    std::cout<< "Assigment" << std::endl;
+
     node->expression->accept(this);
-    int c1 = currentVariableTable ->
+    std::string className;
+    
+    
+    /*
     if (node->identifier_2 == NULL) {
+        if (currentVariableTable->count(node->identifier_1->name)>0){
+            node->basetype = currentVariableTable->find(node->identifier_1->name)->second.type.baseType;
+            node->objectClassName = currentVariableTable->find(node->identifier_1->name)->second.type.objectClassName;
+        } else if (classTable->find(currentClassName)->second.members->count(node->identifier_1->name)>0) {
+            node->basetype = classTable->find(currentClassName)->second.members->find(node->identifier_1->name)->second.type.baseType;
+            node->objectClassName = classTable->find(currentClassName)->second.members->find(node->identifier_1->name)->second.type.objectClassName;
+        } else {
+            ClassInfo ci = findMembersClass(node->identifier_1->name);
+            if (ci == NULL) {
+                typeError(undefined_member);
+            } else {
+                node->basetype = ci.members->find(node)
+            }
+        }
+    
+        if (classTable->count(node->identifier_1->name)== 0) {
+            typeError(undefined_class);
+        }
+        if (classTable->find(node->identifier_1->name)->second.members->count(node->identifier_2->name) == 0) {
+            typeError(undefined_member);
+        }*/
+    
+    // std::cout<<"Name: " << node->identifier_1-> name;
+    CompoundType membertype;
+    if (node->identifier_2 == NULL) {
+        membertype = findMembersClass(node->identifier_1->name);
+        if (membertype.objectClassName != " ") {
+            node->basetype = membertype.baseType;
+            node->objectClassName = membertype.objectClassName;
+        } else {
+            std::cout<<"Finner ikke variable, assigment1" << std::endl;
+        }
+
+    } else {
+       // std::cout << "."<<node->identifier_2->name;
+        membertype = findMembersClass(node->identifier_1->name);
+        if (classTable->find(membertype.objectClassName)->second.members->count(node->identifier_2->name) > 0) {
+            node->basetype = classTable->find(membertype.objectClassName)->second.members->find(node->identifier_2->name)->second.type.baseType;
+            node->objectClassName = classTable->find(membertype.objectClassName)->second.members->find(node->identifier_2->name)->second.type.objectClassName;
+        } else {
+            std::cout<<"Finner ikke variable, assigment2" << std::endl;
+        }
         
     }
+
+    
+    CompoundType temp;
+    temp.baseType = node->expression->basetype;
+    temp.objectClassName = node->expression->objectClassName;
+    CompoundType types;
+    types.baseType = node->basetype;
+    types.objectClassName = node->objectClassName;
+
+    
+    //std::cout<<" Left: " << string(types) <<" Right: "<< string(temp)<< " Member: " << membertype.objectClassName << std::endl;
     
     
+    if (node->basetype != node->expression->basetype || node->objectClassName != node->expression->objectClassName) {
+        typeError(assignment_type_mismatch);
+    }
     
   // WRITEME: Replace with code if necessary
 }
@@ -381,6 +438,7 @@ void TypeCheck::visitTimesNode(TimesNode* node) {
 void TypeCheck::visitDivideNode(DivideNode* node) {
     node->expression_1->accept(this);
     node->expression_2->accept(this);
+    
     if (node->expression_1->basetype != bt_integer || node->expression_2->basetype != bt_integer) {
         typeError(expression_type_mismatch);
     }
@@ -413,10 +471,11 @@ void TypeCheck::visitLessEqualNode(LessEqualNode* node) {
 void TypeCheck::visitEqualNode(EqualNode* node) {
     node->expression_1->accept(this);
     node->expression_2->accept(this);
+    
     if (node->expression_1->basetype != node->expression_2->basetype) {
         typeError(expression_type_mismatch);
     }
-    if (node->expression_1->basetype != bt_integer || node->expression_1->basetype != bt_boolean) {
+    if (node->expression_1->basetype == bt_none || node->expression_1->basetype == bt_object) {
         typeError(expression_type_mismatch);
     }
     node->basetype = bt_boolean;
@@ -462,14 +521,99 @@ void TypeCheck::visitNegationNode(NegationNode* node) {
 }
 
 void TypeCheck::visitMethodCallNode(MethodCallNode* node) {
+    node->visit_children(this);
+    if (node->identifier_2 == NULL) {
+        MethodInfo methodinfo = findMethodsClass(node->identifier_1->name);
+        if (methodinfo.localsSize != -1) {
+            if (methodinfo.parameters->size() != node->expression_list->size()) {
+                typeError(argument_number_mismatch);
+            }
+        } else {
+            typeError(undefined_method);
+        }
+    }
+    
+    
+
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitMemberAccessNode(MemberAccessNode* node) {
+    std::string className;
+    
+    if (currentVariableTable->count(node->identifier_1->name)>0) {
+        className =currentVariableTable->find(node->identifier_1->name)->second.type.objectClassName;
+    }
+    
+    else if (classTable->find(currentClassName)->second.members->count(node->identifier_1->name) > 0){
+        className = classTable->find(currentClassName)->second.members->find(node->identifier_1->name)->second.type.objectClassName;
+    } else {
+        
+        ClassInfo currentClassInfo;
+        currentClassInfo = classTable->find(currentClassName)->second;
+        std::string super = currentClassInfo.superClassName;
+        std::string objName = node->identifier_1->name;
+        
+        while (super != "") {
+            currentClassInfo =classTable->find(super)->second;
+            
+            if (currentClassInfo.members->count(objName) > 0) {
+                className = currentClassInfo.members->find(objName)->second.type.objectClassName;
+                break;
+            }
+            super = currentClassInfo.superClassName;
+        }
+    }
+    
+    
+    if (classTable->find(className)->second.members->count(node->identifier_2->name) > 0) {
+        node->basetype = classTable->find(className)->second.members->find(node->identifier_2->name)->second.type.baseType;
+        node->objectClassName = classTable->find(className)->second.members->find(node->identifier_2->name)->second.type.objectClassName;
+    }
+    
+
+    
   // WRITEME: Replace with code if necessary
 }
 
 void TypeCheck::visitVariableNode(VariableNode* node) {
+    
+    node->visit_children(this);
+    
+    ClassInfo currentClassInfo;
+    currentClassInfo = classTable->find(currentClassName)->second;
+    std::string super = currentClassInfo.superClassName;
+    std::string varName = node->identifier->name;
+    
+  //  std::cout<<"VarName: "<< node->identifier->name << std::endl;
+    //std::cout<<"Super: " << currentClassInfo.superClassName << std::endl;
+    
+    if (currentVariableTable->count(varName) > 0) {
+        node->basetype = currentVariableTable->find(varName)->second.type.baseType;
+        node->objectClassName = currentVariableTable->find(varName)->second.type.objectClassName;
+        return;
+    }
+    if (classTable->find(currentClassName)->second.members->count(varName)>0){
+        node->basetype = classTable->find(currentClassName)->second.members->find(varName)->second.type.baseType;
+        node->objectClassName = classTable->find(currentClassName)->second.members->find(varName)->second.type.objectClassName;
+        return;
+    }
+    
+    while (super != "") {
+        currentClassInfo =classTable->find(super)->second;
+        
+        if (currentClassInfo.members->count(varName) > 0) {
+            node->basetype = currentClassInfo.members->find(varName)->second.type.baseType;
+            node->objectClassName = currentClassInfo.members->find(varName)->second.type.objectClassName;
+            break;
+        }
+            super = currentClassInfo.superClassName;
+        
+    }
+
+    if (currentClassInfo.members->count(varName) == 0) {
+        typeError(undefined_variable);
+    }
   // WRITEME: Replace with code if necessary
 }
 
@@ -523,6 +667,74 @@ void TypeCheck::visitIntegerNode(IntegerNode* node) {
     
   // WRITEME: Replace with code if necessary
 }
+
+
+
+
+
+
+CompoundType TypeCheck::findMembersClass(std::string name){
+    
+    if (currentVariableTable->count(name)>0){
+        return currentVariableTable->find(name)->second.type;
+    }
+    if (classTable->find(currentClassName)->second.members->count(name)>0) {
+        return classTable->find(currentClassName)->second.members->find(name)->second.type;
+    }
+    
+    ClassInfo currentClassInfo;
+    currentClassInfo = classTable->find(currentClassName)->second;
+    std::string super = currentClassInfo.superClassName;
+
+    
+    while (super != "") {
+        currentClassInfo =classTable->find(super)->second;
+        
+        if (currentClassInfo.members->count(name) > 0) {
+            return currentClassInfo.members->find(name)->second.type;
+        }
+        super = currentClassInfo.superClassName;
+        
+    }
+    
+    CompoundType c;
+    c.baseType = bt_integer;
+    c.objectClassName = " ";
+    return c;
+    
+}
+
+
+MethodInfo TypeCheck::findMethodsClass(std::string name){
+    
+    if (classTable->find(currentClassName)->second.members->count(name)>0){
+        return classTable->find(currentClassName)->second.methods->find(name)->second;
+    }
+    
+    ClassInfo currentClassInfo;
+    currentClassInfo = classTable->find(currentClassName)->second;
+    std::string super = currentClassInfo.superClassName;
+    
+    
+    while (super != "") {
+        currentClassInfo =classTable->find(super)->second;
+        
+        if (currentClassInfo.methods->count(name) > 0) {
+            return currentClassInfo.methods->find(name)->second;
+        }
+        super = currentClassInfo.superClassName;
+        
+    }
+    
+    MethodInfo m;
+    m.localsSize = -1;
+    return m;
+    
+}
+
+
+
+
 
 
 // The following functions are used to print the Symbol Table.
