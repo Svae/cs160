@@ -183,9 +183,6 @@ public:
   virtual void visitNoneNode(NoneNode* node);
   virtual void visitIdentifierNode(IdentifierNode* node);
   virtual void visitIntegerNode(IntegerNode* node);
-    
-    virtual CompoundType findMembersClass(std::string name);
-    virtual MethodInfo findMethodsClass(std::string name);
 };
 
 // The following functions are used to print the Symbol Table.
