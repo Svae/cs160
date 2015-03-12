@@ -97,12 +97,6 @@ void TypeCheck::visitClassNode(ClassNode* node){
     
     currentVariableTable = new VariableTable();
     
-    for(std::list<DeclarationNode*>::iterator it = node->declaration_list->begin(); it !=node->declaration_list->end(); it++){
-        visitDeclarationNode(*it);
-    }
-    
-    
-    //"Feil" rekkefølge
     std::string super = classinfo.superClassName;
     while (super != "") {
         VariableTable* supermembers = classTable->find(classinfo.superClassName)->second.members;
@@ -116,6 +110,14 @@ void TypeCheck::visitClassNode(ClassNode* node){
         
     }
     
+    
+    for(std::list<DeclarationNode*>::iterator it = node->declaration_list->begin(); it !=node->declaration_list->end(); it++){
+        visitDeclarationNode(*it);
+    }
+    
+    
+
+    
     classinfo.members = currentVariableTable;
     classinfo.membersSize = currentVariableTable->size()*4;
     if (currentClassName == "Main" && currentVariableTable->size() > 0)
@@ -128,17 +130,6 @@ void TypeCheck::visitClassNode(ClassNode* node){
     }
     
     // Sjekk for hvilken metode fra super classe man skal bruke
-    std::string super = classTable->find(currentClassName)->second.superClassName;
-    while (super != "") {
-        MethodTable* superMethods = classTable->find(super)->second.methods;
-        for(std::map<std::string, MethodInfo>::iterator it = superMethods->begin(); it !=superMethods->end(); it++){
-            if (currentMethodTable -> count(it->first) == 0) {
-                (*currentMethodTable)[it->first] = it->second;
-            }
-        }
-        super = classTable->find(super)->second.superClassName;
-    }
-    
     classinfo.methods = currentMethodTable;
     
     
@@ -196,13 +187,25 @@ void TypeCheck::visitMethodNode(MethodNode* node) {
         typeError(return_type_mismatch);
     }
     
-    if (node->type->basetype != bt_none && (node->methodbody->basetype != node->type->basetype || node->methodbody->objectClassName != node->type->objectClassName)) {
+    if (node->type->basetype != bt_none && node->methodbody->basetype != node->type->basetype) {
         typeError(return_type_mismatch);
     }
     
     if (node->type->basetype == bt_object && node->methodbody->basetype == bt_object) {
         if (node->methodbody->objectClassName != node->type->objectClassName) {
-            typeError(return_type_mismatch);
+            std::string super = classTable -> find(node->methodbody->objectClassName )->second.superClassName;
+            while (super != "") {
+                if (super != node->type->objectClassName) {
+                    super = classTable -> find(super)->second.superClassName;
+                } else {
+                    break;
+                }
+            }
+            if (super == "") {
+                typeError(return_type_mismatch);
+            } else {
+                
+            }
         }
     }
     
@@ -722,24 +725,23 @@ void TypeCheck::visitNewNode(NewNode* node) {
         typeError(undefined_class);
         return;
     }
-    if (classTable->find(node->identifier->name)->second.methods->count(node->identifier->name) == 0) {
-        typeError(undefined_method);
-        return;
-    }
-    
-    MethodInfo methodinfo = classTable->find(node->identifier->name)->second.methods->find(node->identifier->name)->second;
-    if (methodinfo.parameters->size() != node->expression_list->size()) {
-        typeError(argument_number_mismatch);
-    }
-    
-    
-    std::list<CompoundType>::iterator methodParameters = methodinfo.parameters->begin();
-    for(std::list<ExpressionNode*>::iterator nodeParameters = node->expression_list->begin(); nodeParameters !=node->expression_list->end(); nodeParameters++){
-        if ((*nodeParameters)->basetype != (*methodParameters).baseType || (*nodeParameters)->objectClassName != (*methodParameters).objectClassName) {
-            typeError(argument_type_mismatch);
+
+    if (node->expression_list != NULL) {
+        MethodInfo methodinfo = classTable->find(node->identifier->name)->second.methods->find(node->identifier->name)->second;
+
+        if (methodinfo.parameters->size() != node->expression_list->size()) {
+            typeError(argument_number_mismatch);
         }
-        methodParameters++;
+        
+        std::list<CompoundType>::iterator methodParameters = methodinfo.parameters->begin();
+        for(std::list<ExpressionNode*>::iterator nodeParameters = node->expression_list->begin(); nodeParameters !=node->expression_list->end(); nodeParameters++){
+            if ((*nodeParameters)->basetype != (*methodParameters).baseType || (*nodeParameters)->objectClassName != (*methodParameters).objectClassName) {
+                typeError(argument_type_mismatch);
+            }
+            methodParameters++;
+        }
     }
+
     
     node->basetype = bt_object;
     node->objectClassName = node->identifier->name;
