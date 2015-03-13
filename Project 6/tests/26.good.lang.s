@@ -1,3 +1,325 @@
+ClassTable {
+  Main -> {
+    VariableTable {},
+    MethodTable {
+      main -> {
+        None,
+        28,
+        VariableTable {
+          i0 -> {Integer, -8, 4},
+          i1 -> {Integer, -12, 4},
+          i2 -> {Integer, -16, 4},
+          i3 -> {Integer, -20, 4},
+          i4 -> {Integer, -24, 4},
+          i5 -> {Integer, -28, 4},
+          local0 -> {Boolean, -4, 4}
+        }
+      }
+    }
+  },
+  class0 -> {
+    VariableTable {
+      member0 -> {Integer, 0, 4},
+      member1 -> {Boolean, 4, 4},
+      member2 -> {Boolean, 8, 4},
+      member3 -> {Boolean, 12, 4},
+      member4 -> {Integer, 16, 4}
+    },
+    MethodTable {
+      class0 -> {
+        None,
+        8,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          arg1 -> {Integer, 16, 4},
+          arg2 -> {Boolean, 20, 4},
+          local0 -> {Integer, -4, 4},
+          local1 -> {Integer, -8, 4}
+        }
+      },
+      f0 -> {
+        Boolean,
+        28,
+        VariableTable {
+          arg0 -> {Boolean, 12, 4},
+          arg1 -> {Integer, 16, 4},
+          arg2 -> {Integer, 20, 4},
+          arg3 -> {Integer, 24, 4},
+          i0 -> {Integer, -28, 4},
+          local0 -> {Integer, -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Integer, -12, 4},
+          local3 -> {Boolean, -16, 4},
+          local4 -> {Integer, -20, 4},
+          local5 -> {Integer, -24, 4}
+        }
+      },
+      f1 -> {
+        Integer,
+        8,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          arg1 -> {Integer, 16, 4},
+          arg2 -> {Boolean, 20, 4},
+          arg3 -> {Boolean, 24, 4},
+          local0 -> {Integer, -4, 4},
+          local1 -> {Boolean, -8, 4}
+        }
+      },
+      f2 -> {
+        None,
+        20,
+        VariableTable {
+          local0 -> {Integer, -4, 4},
+          local1 -> {Boolean, -8, 4},
+          local2 -> {Integer, -12, 4},
+          local3 -> {Boolean, -16, 4},
+          local4 -> {Integer, -20, 4}
+        }
+      }
+    }
+  },
+  class1 -> {
+    class0,
+    VariableTable {
+      member0 -> {Integer, 0, 4},
+      member1 -> {Boolean, 4, 4},
+      member2 -> {Boolean, 8, 4},
+      member3 -> {Boolean, 12, 4},
+      member4 -> {Integer, 16, 4},
+      member5 -> {Boolean, 20, 4},
+      member6 -> {Integer, 24, 4}
+    },
+    MethodTable {
+      class1 -> {
+        None,
+        0,
+        VariableTable {
+          arg0 -> {Boolean, 12, 4}
+        }
+      },
+      f3 -> {
+        Boolean,
+        8,
+        VariableTable {
+          arg0 -> {Boolean, 12, 4},
+          arg1 -> {Object(class0), 16, 4},
+          arg2 -> {Object(class0), 20, 4},
+          arg3 -> {Integer, 24, 4},
+          arg4 -> {Object(class0), 28, 4},
+          i0 -> {Integer, -4, 4},
+          i1 -> {Integer, -8, 4}
+        }
+      },
+      f4 -> {
+        Object(class0),
+        8,
+        VariableTable {
+          arg0 -> {Object(class0), 12, 4},
+          arg1 -> {Object(class0), 16, 4},
+          arg2 -> {Boolean, 20, 4},
+          arg3 -> {Integer, 24, 4},
+          arg4 -> {Integer, 28, 4},
+          local0 -> {Boolean, -4, 4},
+          local1 -> {Boolean, -8, 4}
+        }
+      },
+      f5 -> {
+        Boolean,
+        12,
+        VariableTable {
+          arg0 -> {Boolean, 12, 4},
+          arg1 -> {Integer, 16, 4},
+          arg2 -> {Integer, 20, 4},
+          i0 -> {Integer, -8, 4},
+          i1 -> {Integer, -12, 4},
+          local0 -> {Object(class0), -4, 4}
+        }
+      }
+    }
+  },
+  class2 -> {
+    class0,
+    VariableTable {
+      member0 -> {Integer, 0, 4},
+      member1 -> {Boolean, 4, 4},
+      member2 -> {Boolean, 8, 4},
+      member3 -> {Boolean, 12, 4},
+      member4 -> {Integer, 16, 4},
+      member5 -> {Object(class0), 20, 4},
+      member6 -> {Object(class0), 24, 4},
+      member7 -> {Integer, 28, 4},
+      member8 -> {Integer, 32, 4},
+      member9 -> {Object(class0), 36, 4}
+    },
+    MethodTable {
+      class2 -> {
+        None,
+        4,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          arg1 -> {Integer, 16, 4},
+          i0 -> {Integer, -4, 4}
+        }
+      },
+      f3 -> {
+        None,
+        24,
+        VariableTable {
+          arg0 -> {Boolean, 12, 4},
+          arg1 -> {Boolean, 16, 4},
+          arg2 -> {Object(class1), 20, 4},
+          arg3 -> {Object(class1), 24, 4},
+          arg4 -> {Integer, 28, 4},
+          i0 -> {Integer, -24, 4},
+          local0 -> {Boolean, -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Integer, -12, 4},
+          local3 -> {Integer, -16, 4},
+          local4 -> {Integer, -20, 4}
+        }
+      },
+      f4 -> {
+        Integer,
+        16,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          arg1 -> {Object(class1), 16, 4},
+          arg2 -> {Integer, 20, 4},
+          local0 -> {Object(class1), -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Object(class0), -12, 4},
+          local3 -> {Integer, -16, 4}
+        }
+      },
+      f5 -> {
+        None,
+        16,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          arg1 -> {Object(class1), 16, 4},
+          arg2 -> {Object(class0), 20, 4},
+          i0 -> {Integer, -16, 4},
+          local0 -> {Boolean, -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Object(class1), -12, 4}
+        }
+      },
+      f6 -> {
+        Object(class1),
+        24,
+        VariableTable {
+          i0 -> {Integer, -24, 4},
+          local0 -> {Boolean, -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Integer, -12, 4},
+          local3 -> {Integer, -16, 4},
+          local4 -> {Integer, -20, 4}
+        }
+      },
+      f7 -> {
+        Boolean,
+        12,
+        VariableTable {
+          local0 -> {Integer, -4, 4},
+          local1 -> {Object(class0), -8, 4},
+          local2 -> {Boolean, -12, 4}
+        }
+      }
+    }
+  },
+  class3 -> {
+    class0,
+    VariableTable {
+      member0 -> {Integer, 0, 4},
+      member1 -> {Boolean, 4, 4},
+      member2 -> {Boolean, 8, 4},
+      member3 -> {Boolean, 12, 4},
+      member4 -> {Integer, 16, 4},
+      member5 -> {Integer, 20, 4},
+      member6 -> {Object(class1), 24, 4},
+      member7 -> {Integer, 28, 4}
+    },
+    MethodTable {
+      class3 -> {
+        None,
+        28,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          i0 -> {Integer, -28, 4},
+          local0 -> {Integer, -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Boolean, -12, 4},
+          local3 -> {Boolean, -16, 4},
+          local4 -> {Integer, -20, 4},
+          local5 -> {Object(class2), -24, 4}
+        }
+      },
+      f3 -> {
+        None,
+        16,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          i0 -> {Integer, -8, 4},
+          i1 -> {Integer, -12, 4},
+          i2 -> {Integer, -16, 4},
+          local0 -> {Integer, -4, 4}
+        }
+      },
+      f4 -> {
+        None,
+        4,
+        VariableTable {
+          arg0 -> {Boolean, 12, 4},
+          arg1 -> {Integer, 16, 4},
+          arg2 -> {Object(class2), 20, 4},
+          arg3 -> {Integer, 24, 4},
+          local0 -> {Object(class2), -4, 4}
+        }
+      },
+      f5 -> {
+        None,
+        20,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          local0 -> {Integer, -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Boolean, -12, 4},
+          local3 -> {Integer, -16, 4},
+          local4 -> {Boolean, -20, 4}
+        }
+      },
+      f6 -> {
+        Boolean,
+        8,
+        VariableTable {
+          arg0 -> {Object(class1), 12, 4},
+          arg1 -> {Integer, 16, 4},
+          arg2 -> {Integer, 20, 4},
+          arg3 -> {Integer, 24, 4},
+          arg4 -> {Integer, 28, 4},
+          local0 -> {Integer, -4, 4},
+          local1 -> {Object(class1), -8, 4}
+        }
+      },
+      f7 -> {
+        Integer,
+        20,
+        VariableTable {
+          arg0 -> {Integer, 12, 4},
+          arg1 -> {Boolean, 16, 4},
+          arg2 -> {Integer, 20, 4},
+          arg3 -> {Integer, 24, 4},
+          local0 -> {Integer, -4, 4},
+          local1 -> {Integer, -8, 4},
+          local2 -> {Object(class1), -12, 4},
+          local3 -> {Integer, -16, 4},
+          local4 -> {Boolean, -20, 4}
+        }
+      }
+    }
+  }
+}
   .data
   printstr: .asciz "%d\n"
   .text
@@ -147,8 +469,8 @@
   push $1
   end_5:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_4
   push -28(%ebp)
   push $2
@@ -404,8 +726,8 @@
   push $1
   end_12:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_11
   push -4(%ebp)
   push $10
@@ -440,8 +762,8 @@
   push $1
   end_14:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_13
   push -8(%ebp)
   push $4
@@ -464,7 +786,7 @@
   end_13:
   push $48
   mov 8(%ebp), %edx
-  push 4(%edx)
+  push 24(%edx)
   pop %edx
   pop %eax
   cmp %edx, %eax
@@ -512,27 +834,38 @@
   push %ebp
   mov %esp, %ebp
   sub $12, %esp
-# membersize20
   push $20
   call malloc
-  add $12, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $0
+  push $132
+  push $23
+  pop %edx
+  neg %edx
+  push %eax
+  push %ecx
+  call class0_class0
+  add $16, %esp
   pop %eax
   mov %eax, -4(%ebp)
   mov 8(%ebp), %edx
-  push 20(%edx)
+  push 12(%edx)
   pop %edx
   not %edx
   push %eax
   pop %eax
   mov -4(%ebp), %edx
   mov %eax, 4(%edx)
+#objectClassName: class0
   mov -4(%ebp), %edx
   push 4(%edx)
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
   jne else_17
+#objectClassName: class0
   mov -4(%ebp), %edx
   push 12(%edx)
   pop %edx
@@ -565,8 +898,8 @@
   push $1
   end_20:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_19
   push -8(%ebp)
   push $2
@@ -593,8 +926,8 @@
   push $1
   end_22:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_21
   push -12(%ebp)
   push $2
@@ -606,7 +939,7 @@
   pop %eax
   mov %eax, -12(%ebp)
   mov 8(%ebp), %edx
-  push 12(%edx)
+  push 4(%edx)
   pop %edx
   not %edx
   push %eax
@@ -614,12 +947,13 @@
   mov $1, %eax
   cmp %edx, %eax
   jne else_23
+#objectClassName: class0
   mov -4(%ebp), %edx
   push 4(%edx)
   push $printstr
   call printf
   mov 8(%ebp), %edx
-  push 20(%edx)
+  push 12(%edx)
   push $printstr
   call printf
   push -4(%ebp)
@@ -629,7 +963,7 @@
   jmp end_23
   else_23:
   mov 8(%ebp), %edx
-  push 24(%edx)
+  push 16(%edx)
   push $1
   push $1
   push $203
@@ -655,7 +989,7 @@
   add $0, %esp
   push %eax
   mov 8(%ebp), %edx
-  push 0(%edx)
+  push 20(%edx)
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
@@ -664,6 +998,7 @@
   call class0_f2
   add $0, %esp
   push %eax
+#objectClassName: class0
   mov -4(%ebp), %edx
   push 8(%edx)
   pop %eax
@@ -673,6 +1008,7 @@
   else_25:
   end_25:
   end_23:
+#objectClassName: class0
   mov -4(%ebp), %edx
   push 0(%edx)
   pop %eax
@@ -704,13 +1040,13 @@
   push $printstr
   call printf
   mov 8(%ebp), %edx
-  push 12(%edx)
+  push 4(%edx)
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
   jne else_28
   mov 8(%ebp), %edx
-  push 0(%edx)
+  push 20(%edx)
   pop %edx
   not %edx
   push %eax
@@ -746,7 +1082,7 @@
   mov -4(%ebp), %edx
   mov %eax, 8(%edx)
   mov 8(%ebp), %edx
-  push 4(%edx)
+  push 24(%edx)
   push $printstr
   call printf
   end_29:
@@ -754,6 +1090,7 @@
   else_28:
   end_28:
   push $246
+#objectClassName: class0
   mov -4(%ebp), %edx
   push 0(%edx)
   # Plus
@@ -792,6 +1129,7 @@
   push %eax
   end_17:
   push $126
+#objectClassName: class0
   mov -4(%ebp), %edx
   push 0(%edx)
   # Plus
@@ -813,7 +1151,7 @@
   mov -4(%ebp), %edx
   mov %eax, 12(%edx)
   mov 8(%ebp), %edx
-  push 12(%edx)
+  push 4(%edx)
   pop %eax
   leave
   ret
@@ -825,17 +1163,17 @@
   push $119
   push $114
   push 8(%ebp)
-  call class1_class0
+  call class0_class0
   add $12, %esp
   push %eax
   push $1
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 0(%edx)
+  mov %eax, 20(%edx)
   push $234
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 4(%edx)
+  mov %eax, 24(%edx)
   push $48
   push $printstr
   call printf
@@ -883,8 +1221,9 @@
   push %eax
   pop %eax
   mov %eax, -12(%ebp)
+#objectClassName: class1
   mov 20(%ebp), %edx
-  push 12(%edx)
+  push 4(%edx)
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
@@ -924,7 +1263,7 @@
   pop %eax
   mov %eax, -8(%ebp)
   push 20(%ebp)
-  call class1_f2
+  call class0_f2
   add $0, %esp
   push %eax
   end_34:
@@ -947,8 +1286,8 @@
   push $1
   end_36:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_35
   push -24(%ebp)
   push $3
@@ -960,20 +1299,20 @@
   pop %eax
   mov %eax, -24(%ebp)
   push 20(%ebp)
-  call class1_f2
+  call class0_f2
   add $0, %esp
   push %eax
   push $86
   pop %eax
   mov %eax, -8(%ebp)
   push 20(%ebp)
-  call class1_f2
+  call class0_f2
   add $0, %esp
   push %eax
   jmp start_35
   end_35:
   push 20(%ebp)
-  call class1_f2
+  call class0_f2
   add $0, %esp
   push %eax
   leave
@@ -997,11 +1336,15 @@
   push %eax
   pop %eax
   mov %eax, -8(%ebp)
-# membersize28
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $1
+  push %ecx
+  call class1_class1
+  add $8, %esp
   pop %eax
   mov %eax, -4(%ebp)
   push $103
@@ -1033,11 +1376,20 @@
   push %eax
   pop %eax
   mov %eax, -16(%ebp)
-# membersize20
   push $20
   call malloc
-  add $12, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $0
+  pop %edx
+  not %edx
+  push %eax
+  push $53
+  push $182
+  push %ecx
+  call class0_class0
+  add $16, %esp
   pop %eax
   mov %eax, -12(%ebp)
   push $0
@@ -1058,11 +1410,15 @@
   push $1
   pop %eax
   mov %eax, -4(%ebp)
-# membersize28
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $0
+  push %ecx
+  call class1_class1
+  add $8, %esp
   pop %eax
   mov %eax, -12(%ebp)
   push $73400320
@@ -1081,8 +1437,8 @@
   push $1
   end_38:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_37
   push -16(%ebp)
   push $4
@@ -1095,17 +1451,18 @@
   pop %eax
   mov %eax, -16(%ebp)
   mov 8(%ebp), %edx
-  push 36(%edx)
+  push 16(%edx)
   push $printstr
   call printf
+#objectClassName: class1
   mov -12(%ebp), %edx
-  push 4(%edx)
+  push 24(%edx)
   push $111
   push $77
   mov 8(%ebp), %edx
-  push 28(%edx)
+  push 8(%edx)
   push -12(%ebp)
-  call class1_f0
+  call class0_f0
   add $16, %esp
   push %eax
   push $printstr
@@ -1134,12 +1491,41 @@
   pop %eax
   mov %eax, -12(%ebp)
   mov 8(%ebp), %edx
-  push 4(%edx)
-# membersize28
+  push 24(%edx)
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $145
+  pop %edx
+  neg %edx
+  push %eax
+  push $1
+  pop %edx
+  not %edx
+  push %eax
+  push $1
+  push $64
+  push $63
+  push 20(%ebp)
+  call class0_f1
+  add $16, %esp
+  push %eax
+  push -8(%ebp)
+  push $1
+  push $0
+  pop %edx
+  pop %eax
+  and %edx, %eax
+  push %eax
+  push 20(%ebp)
+  call class0_f0
+  add $16, %esp
+  push %eax
+  push %ecx
+  call class1_class1
+  add $8, %esp
   push $87
   pop %edx
   neg %edx
@@ -1170,8 +1556,8 @@
   push $1
   end_40:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_39
   push -24(%ebp)
   push $4
@@ -1183,7 +1569,7 @@
   pop %eax
   mov %eax, -24(%ebp)
   mov 8(%ebp), %edx
-  push 12(%edx)
+  push 32(%edx)
   push $56
   # Minus
   pop %edx
@@ -1191,7 +1577,7 @@
   sub %edx, %eax
   push %eax
   mov 8(%ebp), %edx
-  push 12(%edx)
+  push 32(%edx)
   # Plus
   pop %edx
   pop %eax
@@ -1204,11 +1590,15 @@
   mov %eax, -16(%ebp)
   jmp start_39
   end_39:
-# membersize28
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push -4(%ebp)
+  push %ecx
+  call class1_class1
+  add $8, %esp
   pop %eax
   leave
   ret
@@ -1216,11 +1606,24 @@
   push %ebp
   mov %esp, %ebp
   sub $12, %esp
-# membersize20
   push $20
   call malloc
-  add $12, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $1
+  push $51
+  push $181
+  # Divide
+  pop %ebx
+  pop %eax
+  cdq
+  idiv %ebx
+  push %eax
+  push $241
+  push %ecx
+  call class0_class0
+  add $16, %esp
   pop %eax
   mov %eax, -8(%ebp)
   push $128
@@ -1242,8 +1645,10 @@
   push $1
   pop %eax
   mov %eax, -12(%ebp)
+#objectClassName: class0
   mov -8(%ebp), %edx
   push 16(%edx)
+#objectClassName: class0
   mov -8(%ebp), %edx
   push 0(%edx)
   # Times
@@ -1251,6 +1656,7 @@
   pop %eax
   imul %edx, %eax
   push %eax
+#objectClassName: class0
   mov -8(%ebp), %edx
   push 0(%edx)
   # Divide
@@ -1273,17 +1679,23 @@
   push $176
   push $239
   push 8(%ebp)
-  call class2_class0
+  call class0_class0
   add $12, %esp
   push %eax
-# membersize20
   push $20
   call malloc
-  add $12, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $0
+  push $52
+  push $74
+  push %ecx
+  call class0_class0
+  add $16, %esp
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 0(%edx)
+  mov %eax, 20(%edx)
   push $224
   push $215
   # Plus
@@ -1305,27 +1717,59 @@
   push %eax
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 8(%edx)
-# membersize20
+  mov %eax, 28(%edx)
   push $20
   call malloc
-  add $12, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $1
+  push $1
+  pop %edx
+  pop %eax
+  or %edx, %eax
+  push %eax
+  push $82
+  push $99
+  # Plus
+  pop %edx
+  pop %eax
+  add %edx, %eax
+  push %eax
+  push $147
+  push $17
+  # Minus
+  pop %edx
+  pop %eax
+  sub %edx, %eax
+  push %eax
+  push %ecx
+  call class0_class0
+  add $16, %esp
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 4(%edx)
-# membersize20
+  mov %eax, 24(%edx)
   push $20
   call malloc
-  add $12, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $1
+  push $173
+  pop %edx
+  neg %edx
+  push %eax
+  push $183
+  push %ecx
+  call class0_class0
+  add $16, %esp
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 16(%edx)
+  mov %eax, 36(%edx)
   push $203
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 12(%edx)
+  mov %eax, 32(%edx)
   push $142
   push $printstr
   call printf
@@ -1345,8 +1789,8 @@
   push $1
   end_43:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_42
   push -4(%ebp)
   push $5
@@ -1357,12 +1801,12 @@
   push %eax
   pop %eax
   mov %eax, -4(%ebp)
-  push 0(%ebp)
+  push 20(%ebp)
   call class0_f2
   add $0, %esp
   push %eax
   mov 8(%ebp), %edx
-  mov 0(%edx), %ebx
+  mov 20(%edx), %ebx
   push 16(%ebx)
   push $27
   pop %edx
@@ -1379,26 +1823,31 @@
   jmp start_42
   end_42:
   mov 8(%ebp), %edx
-  push 24(%edx)
+  push 4(%edx)
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
   jne else_45
   mov 8(%ebp), %edx
-  push 16(%edx)
-# membersize28
+  push 36(%edx)
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
   mov 8(%ebp), %edx
-  push 12(%edx)
+  push 8(%edx)
+  push %ecx
+  call class1_class1
+  add $8, %esp
+  mov 8(%ebp), %edx
+  push 32(%edx)
   push 8(%ebp)
   call class2_f5
   add $12, %esp
   push %eax
   mov 8(%ebp), %edx
-  push 12(%edx)
+  push 32(%edx)
   push $printstr
   call printf
   jmp end_45
@@ -1425,17 +1874,17 @@
   push $249
   push $233
   mov 8(%ebp), %edx
-  push 8(%edx)
+  push 28(%edx)
   push $1
-  push 4(%ebp)
-  call class1_f0
+  push 24(%ebp)
+  call class0_f0
   add $16, %esp
   push %eax
   push $printstr
   call printf
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 4(%ebx)
+  mov 24(%edx), %ebx
+  push 24(%ebx)
   push -4(%ebp)
   pop %edx
   pop %eax
@@ -1448,8 +1897,8 @@
   end_46:
   push $printstr
   call printf
-  push 4(%ebp)
-  call class1_f2
+  push 24(%ebp)
+  call class0_f2
   add $0, %esp
   push %eax
   push $97
@@ -1471,8 +1920,8 @@
   push $1
   end_48:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_47
   push -8(%ebp)
   push $8
@@ -1499,8 +1948,8 @@
   push $1
   end_50:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_49
   push -12(%ebp)
   push $3
@@ -1536,8 +1985,8 @@
   push $1
   end_52:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_51
   push -16(%ebp)
   push $2
@@ -1550,8 +1999,8 @@
   mov %eax, -16(%ebp)
   push $1
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 0(%ebx)
+  mov 24(%edx), %ebx
+  push 20(%ebx)
   pop %edx
   pop %eax
   or %edx, %eax
@@ -1564,36 +2013,36 @@
   push $printstr
   call printf
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 12(%ebx)
+  mov 24(%edx), %ebx
+  push 4(%ebx)
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
   jne else_53
-  push 4(%ebp)
-  call class1_f2
+  push 24(%ebp)
+  call class0_f2
   add $0, %esp
   push %eax
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 16(%ebx)
+  mov 24(%edx), %ebx
+  push 8(%ebx)
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
   jne else_54
-  push 4(%ebp)
-  call class1_f2
+  push 24(%ebp)
+  call class0_f2
   add $0, %esp
   push %eax
-  push 4(%ebp)
-  call class1_f2
+  push 24(%ebp)
+  call class0_f2
   add $0, %esp
   push %eax
   jmp end_54
   else_54:
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 24(%ebx)
+  mov 24(%edx), %ebx
+  push 16(%ebx)
   pop %edx
   neg %edx
   push %eax
@@ -1601,8 +2050,8 @@
   mov %eax, -4(%ebp)
   push $64
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 24(%ebx)
+  mov 24(%edx), %ebx
+  push 16(%ebx)
   # Divide
   pop %ebx
   pop %eax
@@ -1613,8 +2062,8 @@
   mov %eax, -4(%ebp)
   end_54:
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 16(%ebx)
+  mov 24(%edx), %ebx
+  push 8(%ebx)
   push $printstr
   call printf
   jmp end_53
@@ -1630,11 +2079,22 @@
   push %ebp
   mov %esp, %ebp
   sub $4, %esp
-# membersize40
   push $40
   call malloc
-  add $8, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $83
+  push $219
+  # Times
+  pop %edx
+  pop %eax
+  imul %edx, %eax
+  push %eax
+  push $248
+  push %ecx
+  call class2_class2
+  add $12, %esp
   pop %eax
   mov %eax, -4(%ebp)
   push $5
@@ -1643,9 +2103,10 @@
   push $250
   pop %eax
   mov -4(%ebp), %edx
-  mov %eax, 8(%edx)
+  mov %eax, 28(%edx)
+#objectClassName: class2
   mov -4(%ebp), %edx
-  push 24(%edx)
+  push 4(%edx)
   push $printstr
   call printf
   leave
@@ -1699,16 +2160,43 @@
   pop %eax
   mov %eax, -12(%ebp)
   mov 8(%ebp), %edx
-  mov 4(%edx), %ebx
-  push 8(%ebx)
+  mov 24(%edx), %ebx
+  push 0(%ebx)
   pop %edx
   neg %edx
   push %eax
-# membersize40
   push $40
   call malloc
-  add $8, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  mov 8(%ebp), %edx
+  push 28(%edx)
+  mov 8(%ebp), %edx
+  mov 24(%edx), %ebx
+  push 24(%ebx)
+  # Minus
+  pop %edx
+  pop %eax
+  sub %edx, %eax
+  push %eax
+  push $115
+  push -16(%ebp)
+  # Minus
+  pop %edx
+  pop %eax
+  sub %edx, %eax
+  push %eax
+  mov 8(%ebp), %edx
+  push 28(%edx)
+  # Plus
+  pop %edx
+  pop %eax
+  add %edx, %eax
+  push %eax
+  push %ecx
+  call class2_class2
+  add $12, %esp
   push $104
   push $1
   push 8(%ebp)
@@ -1721,11 +2209,20 @@
   push %ebp
   mov %esp, %ebp
   sub $8, %esp
-# membersize28
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $1
+  push $0
+  pop %edx
+  pop %eax
+  or %edx, %eax
+  push %eax
+  push %ecx
+  call class1_class1
+  add $8, %esp
   pop %eax
   mov %eax, -8(%ebp)
   push $186
@@ -1737,13 +2234,25 @@
   push $26
   pop %eax
   mov %eax, -4(%ebp)
+#objectClassName: class1
   mov -8(%ebp), %edx
-  push 4(%edx)
-# membersize40
+  push 24(%edx)
   push $40
   call malloc
-  add $8, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $187
+  push $225
+  push $0
+  # Minus
+  pop %edx
+  pop %eax
+  sub %edx, %eax
+  push %eax
+  push %ecx
+  call class2_class2
+  add $12, %esp
   push $90
   push $1
   push 8(%ebp)
@@ -1792,19 +2301,23 @@
   push $254
   pop %eax
   mov %eax, -16(%ebp)
-# membersize28
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $1
+  push %ecx
+  call class1_class1
+  add $8, %esp
   pop %eax
   mov %eax, -12(%ebp)
   push $1
   pop %eax
   mov -12(%ebp), %edx
-  mov %eax, 0(%edx)
+  mov %eax, 20(%edx)
   push -12(%ebp)
-  call class1_f2
+  call class0_f2
   add $0, %esp
   push %eax
   push $1
@@ -1813,17 +2326,19 @@
   cmp %edx, %eax
   jne else_55
   mov 8(%ebp), %edx
-  push 24(%edx)
+  push 12(%edx)
   pop %edx
   not %edx
   push %eax
   push $printstr
   call printf
+#objectClassName: class1
   mov -12(%ebp), %edx
-  push 12(%edx)
+  push 4(%edx)
   push $156
+#objectClassName: class1
   mov -12(%ebp), %edx
-  push 24(%edx)
+  push 16(%edx)
   # Plus
   pop %edx
   pop %eax
@@ -1840,8 +2355,9 @@
   push $1
   end_56:
   push $215
+#objectClassName: class1
   mov -12(%ebp), %edx
-  push 24(%edx)
+  push 16(%edx)
   # Plus
   pop %edx
   pop %eax
@@ -1849,14 +2365,14 @@
   push %eax
   push -16(%ebp)
   push -12(%ebp)
-  call class1_f1
+  call class0_f1
   add $16, %esp
   push %eax
   push $printstr
   call printf
   push $28
   mov 8(%ebp), %edx
-  push 8(%edx)
+  push 28(%edx)
   pop %edx
   pop %eax
   cmp %edx, %eax
@@ -1891,12 +2407,12 @@
   push -4(%ebp)
   push -8(%ebp)
   push -12(%ebp)
-  call class1_f1
+  call class0_f1
   add $16, %esp
   push %eax
   push $5
   mov 8(%ebp), %edx
-  push 8(%edx)
+  push 28(%edx)
   # Divide
   pop %ebx
   pop %eax
@@ -1904,7 +2420,7 @@
   idiv %ebx
   push %eax
   push -12(%ebp)
-  call class1_f1
+  call class0_f1
   add $16, %esp
   push %eax
   push 8(%ebp)
@@ -1913,8 +2429,9 @@
   push %eax
   jmp end_55
   else_55:
+#objectClassName: class1
   mov -12(%ebp), %edx
-  push 8(%edx)
+  push 0(%edx)
   pop %eax
   mov %eax, -4(%ebp)
   end_55:
@@ -1925,7 +2442,7 @@
   pop %eax
   mov %eax, -16(%ebp)
   mov 8(%ebp), %edx
-  push 8(%edx)
+  push 28(%edx)
   pop %eax
   leave
   ret
@@ -1950,30 +2467,55 @@
   push $93
   push $89
   push 8(%ebp)
-  call class3_class0
+  call class0_class0
   add $12, %esp
   push %eax
   push $140
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 0(%edx)
+  mov %eax, 20(%edx)
   push $186
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 8(%edx)
-# membersize28
+  mov %eax, 28(%edx)
   push $28
   call malloc
   add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $22
+  push $200
+  pop %edx
+  pop %eax
+  cmp %edx, %eax
+  jl less_60
+  push $0
+  jmp end_60
+  less_60:
+  push $1
+  end_60:
+  push %ecx
+  call class1_class1
+  add $8, %esp
   pop %eax
   mov 8(%ebp), %edx
-  mov %eax, 4(%edx)
-# membersize40
+  mov %eax, 24(%edx)
   push $40
   call malloc
-  add $8, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
+  push $87
+  push $181
+  # Times
+  pop %edx
+  pop %eax
+  imul %edx, %eax
+  push %eax
+  push $89
+  push %ecx
+  call class2_class2
+  add $12, %esp
   pop %eax
   mov %eax, -24(%ebp)
   push $117
@@ -2013,14 +2555,15 @@
   mov %eax, -12(%ebp)
   push $218
   mov 8(%ebp), %edx
-  push 8(%edx)
+  push 28(%edx)
   # Times
   pop %edx
   pop %eax
   imul %edx, %eax
   push %eax
+#objectClassName: class2
   mov -24(%ebp), %edx
-  push 8(%edx)
+  push 28(%edx)
   # Minus
   pop %edx
   pop %eax
@@ -2028,30 +2571,30 @@
   push %eax
   pop %eax
   mov -24(%ebp), %edx
-  mov %eax, 8(%edx)
+  mov %eax, 28(%edx)
   push -24(%ebp)
-  call class2_f2
+  call class0_f2
   add $0, %esp
   push %eax
   push $47
   pop %eax
   mov %eax, -28(%ebp)
-  start_60:
+  start_61:
   push $43
   push -28(%ebp)
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_61
+  jle less_62
   push $0
-  jmp end_61
-  less_61:
+  jmp end_62
+  less_62:
   push $1
-  end_61:
+  end_62:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
-  jne end_60
+  mov $1, %ebx
+  cmp %edx, %ebx
+  jne end_61
   push -28(%ebp)
   push $4
   # Minus
@@ -2061,14 +2604,15 @@
   push %eax
   pop %eax
   mov %eax, -28(%ebp)
+#objectClassName: class2
   mov -24(%ebp), %edx
-  push 36(%edx)
+  push 16(%edx)
   push 8(%ebp)
   call class3_f3
   add $4, %esp
   push %eax
-  jmp start_60
-  end_60:
+  jmp start_61
+  end_61:
   leave
   ret
    Main_main:
@@ -2094,19 +2638,19 @@
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_62
+  jne else_63
   push -4(%ebp)
   push $printstr
   call printf
   push $0
   pop %eax
   mov %eax, -4(%ebp)
-  jmp end_62
-  else_62:
+  jmp end_63
+  else_63:
   push $0
   pop %eax
   mov %eax, -4(%ebp)
-  end_62:
+  end_63:
   push -4(%ebp)
   pop %eax
   mov %eax, -4(%ebp)
@@ -2146,7 +2690,7 @@
   push %eax
   pop %eax
   mov %eax, -8(%ebp)
-  start_63:
+  start_64:
   push $70
   pop %edx
   neg %edx
@@ -2155,16 +2699,16 @@
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jl less_64
+  jl less_65
   push $0
-  jmp end_64
-  less_64:
+  jmp end_65
+  less_65:
   push $1
-  end_64:
+  end_65:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
-  jne end_63
+  mov $1, %ebx
+  cmp %edx, %ebx
+  jne end_64
   push -8(%ebp)
   push $0
   # Minus
@@ -2177,8 +2721,8 @@
   push -4(%ebp)
   pop %eax
   mov %eax, -4(%ebp)
-  jmp start_63
-  end_63:
+  jmp start_64
+  end_64:
   push -4(%ebp)
   pop %eax
   mov %eax, -4(%ebp)
@@ -2186,7 +2730,7 @@
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_65
+  jne else_66
   push $1
   push -4(%ebp)
   pop %edx
@@ -2201,37 +2745,37 @@
   push $0
   pop %eax
   mov %eax, -4(%ebp)
-  jmp end_65
-  else_65:
-  end_65:
+  jmp end_66
+  else_66:
+  end_66:
   push $1
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_66
+  jne else_67
   push $41
   push $204
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_68
+  jle less_69
   push $0
-  jmp end_68
-  less_68:
+  jmp end_69
+  less_69:
   push $1
-  end_68:
+  end_69:
   pop %edx
   not %edx
   push %eax
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_67
+  jne else_68
   push -4(%ebp)
   pop %eax
   mov %eax, -4(%ebp)
-  jmp end_67
-  else_67:
+  jmp end_68
+  else_68:
   push $0
   push -4(%ebp)
   pop %edx
@@ -2246,22 +2790,22 @@
   push %eax
   pop %eax
   mov %eax, -12(%ebp)
-  start_69:
+  start_70:
   push -12(%ebp)
   push $30
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jl less_70
+  jl less_71
   push $0
-  jmp end_70
-  less_70:
+  jmp end_71
+  less_71:
   push $1
-  end_70:
+  end_71:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
-  jne end_69
+  mov $1, %ebx
+  cmp %edx, %ebx
+  jne end_70
   push -12(%ebp)
   push $7
   # Plus
@@ -2281,26 +2825,26 @@
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_71
+  jne else_72
   push $72
   pop %eax
   mov %eax, -16(%ebp)
-  start_72:
+  start_73:
   push -16(%ebp)
   push $135
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_73
+  jle less_74
   push $0
-  jmp end_73
-  less_73:
+  jmp end_74
+  less_74:
   push $1
-  end_73:
+  end_74:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
-  jne end_72
+  mov $1, %ebx
+  cmp %edx, %ebx
+  jne end_73
   push -16(%ebp)
   push $9
   # Plus
@@ -2322,55 +2866,55 @@
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_74
+  jle less_75
   push $0
-  jmp end_74
-  less_74:
+  jmp end_75
+  less_75:
   push $1
-  end_74:
+  end_75:
   push $printstr
   call printf
-  jmp start_72
-  end_72:
-  jmp end_71
-  else_71:
+  jmp start_73
+  end_73:
+  jmp end_72
+  else_72:
   push $31
   push $207
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_76
+  jle less_77
   push $0
-  jmp end_76
-  less_76:
+  jmp end_77
+  less_77:
   push $1
-  end_76:
+  end_77:
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_75
+  jne else_76
   push -4(%ebp)
   push $printstr
   call printf
   push $2125764
   pop %eax
   mov %eax, -20(%ebp)
-  start_77:
+  start_78:
   push $36
   push -20(%ebp)
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_78
+  jle less_79
   push $0
-  jmp end_78
-  less_78:
+  jmp end_79
+  less_79:
   push $1
-  end_78:
+  end_79:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
-  jne end_77
+  mov $1, %ebx
+  cmp %edx, %ebx
+  jne end_78
   push -20(%ebp)
   push $3
   # Divide
@@ -2389,54 +2933,54 @@
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_80
+  jle less_81
   push $0
-  jmp end_80
-  less_80:
+  jmp end_81
+  less_81:
   push $1
-  end_80:
+  end_81:
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_79
+  jne else_80
   push -4(%ebp)
   push $printstr
   call printf
-  jmp end_79
-  else_79:
+  jmp end_80
+  else_80:
   push $166
   push $printstr
   call printf
-  end_79:
-  jmp start_77
-  end_77:
-  jmp end_75
-  else_75:
+  end_80:
+  jmp start_78
+  end_78:
+  jmp end_76
+  else_76:
   push $0
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_81
+  jne else_82
   push $0
   pop %eax
   mov %eax, -4(%ebp)
-  jmp end_81
-  else_81:
+  jmp end_82
+  else_82:
   push $75
   push $234
   pop %edx
   pop %eax
   cmp %edx, %eax
-  je eq_83
+  je eq_84
   push $0
-  jmp end_83
-  eq_83:
+  jmp end_84
+  eq_84:
   push $1
-  end_83:
+  end_84:
   pop %edx
   mov $1, %eax
   cmp %edx, %eax
-  jne else_82
+  jne else_83
   push $236
   push $233
   pop %edx
@@ -2445,33 +2989,33 @@
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_84
+  jle less_85
   push $0
-  jmp end_84
-  less_84:
+  jmp end_85
+  less_85:
   push $1
-  end_84:
+  end_85:
   pop %eax
   mov %eax, -4(%ebp)
   push $36864
   pop %eax
   mov %eax, -24(%ebp)
-  start_85:
+  start_86:
   push $36
   push -24(%ebp)
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jl less_86
+  jl less_87
   push $0
-  jmp end_86
-  less_86:
+  jmp end_87
+  less_87:
   push $1
-  end_86:
+  end_87:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
-  jne end_85
+  mov $1, %ebx
+  cmp %edx, %ebx
+  jne end_86
   push -24(%ebp)
   push $4
   # Divide
@@ -2487,12 +3031,12 @@
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_87
+  jle less_88
   push $0
-  jmp end_87
-  less_87:
+  jmp end_88
+  less_88:
   push $1
-  end_87:
+  end_88:
   pop %eax
   mov %eax, -4(%ebp)
   push $0
@@ -2506,30 +3050,30 @@
   push $254
   push $printstr
   call printf
-  jmp start_85
-  end_85:
+  jmp start_86
+  end_86:
   push $7
   push $105
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jl less_88
+  jl less_89
   push $0
-  jmp end_88
-  less_88:
+  jmp end_89
+  less_89:
   push $1
-  end_88:
+  end_89:
   pop %eax
   mov %eax, -4(%ebp)
-  jmp end_82
-  else_82:
+  jmp end_83
+  else_83:
+  end_83:
   end_82:
-  end_81:
-  end_75:
+  end_76:
   push $62
   pop %eax
   mov %eax, -28(%ebp)
-  start_89:
+  start_90:
   push $148
   pop %edx
   neg %edx
@@ -2538,16 +3082,16 @@
   pop %edx
   pop %eax
   cmp %edx, %eax
-  jle less_90
+  jle less_91
   push $0
-  jmp end_90
-  less_90:
+  jmp end_91
+  less_91:
   push $1
-  end_90:
+  end_91:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
-  jne end_89
+  mov $1, %ebx
+  cmp %edx, %ebx
+  jne end_90
   push -28(%ebp)
   push $10
   # Minus
@@ -2560,21 +3104,21 @@
   push $0
   push $printstr
   call printf
-  jmp start_89
-  end_89:
-  end_71:
-  jmp start_69
-  end_69:
+  jmp start_90
+  end_90:
+  end_72:
+  jmp start_70
+  end_70:
+  end_68:
+  push $1
+  pop %eax
+  mov %eax, -4(%ebp)
+  jmp end_67
+  else_67:
+  push $1
+  pop %eax
+  mov %eax, -4(%ebp)
   end_67:
-  push $1
-  pop %eax
-  mov %eax, -4(%ebp)
-  jmp end_66
-  else_66:
-  push $1
-  pop %eax
-  mov %eax, -4(%ebp)
-  end_66:
   push -4(%ebp)
   pop %eax
   mov %eax, -4(%ebp)

@@ -223,6 +223,11 @@ void TypeCheck::visitMethodNode(MethodNode* node) {
     
     
     currentMethodTable -> insert(std::pair<std::string, MethodInfo>(node->identifier->name,methodinfo));
+    std::map<std::string,ClassInfo>::iterator it;
+    it = classTable->find(currentClassName);
+    it->second.methods = currentMethodTable;
+
+    
     // WRITEME: Replace with code if necessary
 }
 
@@ -269,7 +274,7 @@ void TypeCheck::visitDeclarationNode(DeclarationNode* node) {
             variableinfo.offset = currentLocalOffset;
             currentLocalOffset -= 4;
         }
-        currentVariableTable -> insert(std::pair<std::string, VariableInfo>((*it)->name,variableinfo));
+        (*currentVariableTable)[(*it)->name] = variableinfo;
     }
     
     // WRITEME: Replace with code if necessary

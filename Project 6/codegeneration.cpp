@@ -36,7 +36,12 @@ void CodeGenerator::visitMethodBodyNode(MethodBodyNode* node) {
     std::cout << "  push %ebp" << std::endl;
     std::cout << "  mov %esp, %ebp" << std::endl;
     std::cout << "  sub $" << currentMethodInfo.localsSize <<", %esp" << std::endl;
+    //std::cout << "  push %ebx" << std::endl;
+    //std::cout << "  push %edx" << std::endl;
+
     node->visit_children(this);
+    //std::cout << "  pop %ebx" << std::endl;
+    //std::cout << "  pop %edx" << std::endl;
     std::cout << "  leave" << std::endl;
     std::cout << "  ret" << std::endl;
     // WRITEME: Replace with code if necessary
@@ -61,7 +66,6 @@ void CodeGenerator::visitReturnStatementNode(ReturnStatementNode* node) {
 void CodeGenerator::visitAssignmentNode(AssignmentNode* node) {
     node->visit_children(this);
     std::cout << "  pop %eax"<< std::endl;
-    std::cout << "# Object class: " << node->expression->objectClassName << std::endl;
     if (node->identifier_2 == NULL) {
         if (currentMethodInfo.variables->count(node->identifier_1->name) > 0) {
             std::cout << "  mov %eax, " << currentMethodInfo.variables->find(node->identifier_1->name)->second.offset<<"(%ebp)"<< std::endl;
@@ -72,10 +76,10 @@ void CodeGenerator::visitAssignmentNode(AssignmentNode* node) {
         }
     } else {
         VariableInfo objectInfo;
-        if (currentClassInfo.members->count(node->identifier_1->name) >0) {
-            objectInfo = currentClassInfo.members->find(node->identifier_1->name)->second;
-        } else {
+        if (currentMethodInfo.variables->count(node->identifier_1->name) >0) {
             objectInfo = currentMethodInfo.variables->find(node->identifier_1->name)->second;
+        } else {
+            objectInfo = currentClassInfo.members->find(node->identifier_1->name)->second;
         }
         std::cout << "  mov " << objectInfo.offset <<"(%ebp), %edx" << std::endl;
         int memberoffset = classTable->find(objectInfo.type.objectClassName)->second.members->find(node->identifier_2->name)->second.offset;
@@ -95,8 +99,7 @@ void CodeGenerator::visitIfElseNode(IfElseNode* node) {
     int label = nextLabel();
     node->expression -> accept(this);
     std::cout << "  pop %edx" << std::endl;
-    std::cout << "  mov $1, %eax" << std::endl;
-    std::cout << "  cmp %edx, %eax" << std::endl;
+    std::cout << "  cmp $1, %edx" << std::endl;
     std::cout << "  jne else_" << label << std::endl;
     if (node->statement_list_1 != NULL) {
         for(std::list<StatementNode*>::iterator iter = node->statement_list_1->begin();
@@ -122,8 +125,7 @@ void CodeGenerator::visitWhileNode(WhileNode* node) {
     std::cout << "  start_" << label << ":" << std::endl;
     node->expression -> accept(this);
     std::cout << "  pop %edx" << std::endl;
-    std::cout << "  mov $1, %eax" << std::endl;
-    std::cout << "  cmp %edx, %eax" << std::endl;
+    std::cout << "  cmp $1, %edx" << std::endl;
     std::cout << "  jne end_" << label << std::endl;
     if (node->statement_list->size() > 0) {
         for(std::list<StatementNode*>::iterator iter = node->statement_list->begin();
@@ -140,6 +142,7 @@ void CodeGenerator::visitPrintNode(PrintNode* node) {
     node->visit_children(this);
     std::cout << "  push $printstr" << std::endl;
     std::cout << "  call printf" << std::endl;
+    std::cout << "  add $4, %esp" << std::endl;
     // WRITEME: Replace with code if necessary
 }
 
@@ -263,8 +266,8 @@ void CodeGenerator::visitOrNode(OrNode* node) {
 
 void CodeGenerator::visitNotNode(NotNode* node) {
     node->visit_children(this);
-    std::cout << "  pop %edx" << std::endl;
-    std::cout << "  not %edx" << std::endl;
+    std::cout << "  pop %eax" << std::endl;
+    std::cout << "  xor $1, %eax" << std::endl;
     std::cout << "  push %eax" << std::endl;
 
     // WRITEME: Replace with code if necessary
@@ -272,8 +275,8 @@ void CodeGenerator::visitNotNode(NotNode* node) {
 
 void CodeGenerator::visitNegationNode(NegationNode* node) {
     node->visit_children(this);
-    std::cout << "  pop %edx" << std::endl;
-    std::cout << "  neg %edx" << std::endl;
+    std::cout << "  pop %eax" << std::endl;
+    std::cout << "  neg %eax" << std::endl;
     std::cout << "  push %eax" << std::endl;
 
     // WRITEME: Replace with code if necessary
@@ -344,14 +347,14 @@ void CodeGenerator::visitMethodCallNode(MethodCallNode* node) {
        
     }
     
-    std::cout << "  add $" << (node->expression_list->size() * 4) << ", %esp" << std::endl;
+    std::cout << "  add $" << (node->expression_list->size() * 4) + 4 << ", %esp" << std::endl;
     std::cout << "  push %eax" << std::endl;
     // WRITEME: Replace with code if necessary
 }
 
 void CodeGenerator::visitMemberAccessNode(MemberAccessNode* node) {
     node->visit_children(this);
- 
+    
     if (currentMethodInfo.variables -> count(node->identifier_1->name) > 0 ) {
         VariableInfo objectInfo = currentMethodInfo.variables->find(node->identifier_1->name)->second;
         std::cout << "  mov " << objectInfo.offset << "(%ebp), %edx" << std::endl;
@@ -386,12 +389,12 @@ void CodeGenerator::visitBooleanLiteralNode(BooleanLiteralNode* node) {
 }
 
 void CodeGenerator::visitNewNode(NewNode* node) {
-   
+    
     ClassInfo objectInfo = classTable->find(node->identifier->name)->second;
     std::cout << "  push $" << objectInfo.membersSize << std::endl;
     std::cout << "  call malloc" << std::endl;
-    if (node->expression_list != NULL)
-        std::cout << "  add $" << (node->expression_list->size() * 4)<< ", %esp" << std::endl;
+    std::cout << "  add $4, %esp" << std::endl;
+    std::cout << "  push %eax" << std::endl;
     std::cout << "  mov %eax, %ecx" << std::endl;
     
     if (node->expression_list != NULL) {
@@ -401,8 +404,14 @@ void CodeGenerator::visitNewNode(NewNode* node) {
         }
         std::cout << "  push %ecx" << std::endl;
         std::cout << "  call " << node->identifier->name << "_" <<  node->identifier->name << std::endl;
+        std::cout << "  add $" << (4 * node->expression_list->size()) + 4<< ", %esp" << std::endl;
+    } else {
+        if (classTable->find(node->identifier->name)->second.methods->count(node->identifier->name) > 0) {
+            std::cout << "  push %ecx" << std::endl;
+            std::cout << "  call " << node->identifier->name << "_" <<  node->identifier->name << std::endl;
+            std::cout << "  add $ 4, %esp" << std::endl;
+        }
     }
-    std::cout << "  push %ecx" << std::endl;
 
     // WRITEME: Replace with code if necessary
 }

@@ -1,3 +1,39 @@
+ClassTable {
+  Main -> {
+    VariableTable {},
+    MethodTable {
+      main -> {
+        None,
+        4,
+        VariableTable {
+          a -> {Object(classA), -4, 4}
+        }
+      }
+    }
+  },
+  classA -> {
+    VariableTable {},
+    MethodTable {
+      doAll -> {
+        None,
+        8,
+        VariableTable {
+          i -> {Integer, -4, 4},
+          x -> {Integer, -8, 4}
+        }
+      },
+      f0 -> {
+        Integer,
+        4,
+        VariableTable {
+          val -> {Integer, -4, 4},
+          x -> {Integer, 12, 4},
+          y -> {Boolean, 16, 4}
+        }
+      }
+    }
+  }
+}
   .data
   printstr: .asciz "%d\n"
   .text
@@ -60,8 +96,8 @@
   push $1
   end_2:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_1
   push -4(%ebp)
   push $2

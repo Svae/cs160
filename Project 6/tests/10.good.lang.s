@@ -1,3 +1,53 @@
+ClassTable {
+  Main -> {
+    VariableTable {},
+    MethodTable {
+      main -> {
+        None,
+        4,
+        VariableTable {
+          b -> {Object(classB), -4, 4}
+        }
+      }
+    }
+  },
+  classA -> {
+    VariableTable {
+      x -> {Integer, 0, 4}
+    },
+    MethodTable {
+      classA -> {
+        None,
+        0,
+        VariableTable {
+          val -> {Integer, 12, 4}
+        }
+      },
+      f0 -> {
+        None,
+        0,
+        VariableTable {}
+      }
+    }
+  },
+  classB -> {
+    classA,
+    VariableTable {
+      x -> {Integer, 0, 4},
+      y -> {Boolean, 4, 4}
+    },
+    MethodTable {
+      classB -> {
+        None,
+        0,
+        VariableTable {
+          val1 -> {Integer, 12, 4},
+          val2 -> {Boolean, 16, 4}
+        }
+      }
+    }
+  }
+}
   .data
   printstr: .asciz "%d\n"
   .text
@@ -53,21 +103,25 @@
   call printf
   push $8
   call malloc
-  add $8, %esp
+  add $4, %esp
   push %eax
+  mov %eax, %ecx
   push $1
   push $12
-  push %eax
+  push %ecx
   call classB_classB
+  add $12, %esp
   pop %eax
   mov %eax, -4(%ebp)
   push $2
   push $printstr
   call printf
+#objectClassName: classB
   mov -4(%ebp), %edx
   push 0(%edx)
   push $printstr
   call printf
+#objectClassName: classB
   mov -4(%ebp), %edx
   push 4(%edx)
   push $printstr
@@ -76,10 +130,12 @@
   call classA_f0
   add $0, %esp
   push %eax
+#objectClassName: classB
   mov -4(%ebp), %edx
   push 0(%edx)
   push $printstr
   call printf
+#objectClassName: classB
   mov -4(%ebp), %edx
   push 4(%edx)
   push $printstr

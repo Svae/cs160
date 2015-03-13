@@ -1,3 +1,18 @@
+ClassTable {
+  Main -> {
+    VariableTable {},
+    MethodTable {
+      main -> {
+        None,
+        8,
+        VariableTable {
+          x -> {Integer, -4, 4},
+          y -> {Integer, -8, 4}
+        }
+      }
+    }
+  }
+}
   .data
   printstr: .asciz "%d\n"
   .text

@@ -1,3 +1,15 @@
+ClassTable {
+  Main -> {
+    VariableTable {},
+    MethodTable {
+      main -> {
+        None,
+        0,
+        VariableTable {}
+      }
+    }
+  }
+}
   .data
   printstr: .asciz "%d\n"
   .text

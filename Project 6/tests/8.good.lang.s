@@ -1,3 +1,18 @@
+ClassTable {
+  Main -> {
+    VariableTable {},
+    MethodTable {
+      main -> {
+        None,
+        8,
+        VariableTable {
+          i -> {Integer, -4, 4},
+          x -> {Integer, -8, 4}
+        }
+      }
+    }
+  }
+}
   .data
   printstr: .asciz "%d\n"
   .text
@@ -25,8 +40,8 @@
   push $1
   end_1:
   pop %edx
-  mov $1, %eax
-  cmp %edx, %eax
+  mov $1, %ebx
+  cmp %edx, %ebx
   jne end_0
   push -8(%ebp)
   push -4(%ebp)

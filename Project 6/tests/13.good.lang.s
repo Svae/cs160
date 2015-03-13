@@ -1,3 +1,37 @@
+ClassTable {
+  Main -> {
+    VariableTable {},
+    MethodTable {
+      main -> {
+        None,
+        4,
+        VariableTable {
+          a -> {Object(classA), -4, 4}
+        }
+      }
+    }
+  },
+  classA -> {
+    VariableTable {},
+    MethodTable {
+      doAll -> {
+        None,
+        8,
+        VariableTable {
+          x -> {Integer, -4, 4},
+          y -> {Integer, -8, 4}
+        }
+      },
+      f0 -> {
+        Integer,
+        0,
+        VariableTable {
+          x -> {Integer, 12, 4}
+        }
+      }
+    }
+  }
+}
   .data
   printstr: .asciz "%d\n"
   .text
